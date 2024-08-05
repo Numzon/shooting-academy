@@ -1,0 +1,56 @@
+.header {
+  background-image: linear-gradient(
+      to right top,
+      rgb($color-primary-light, 0.8),
+      rgb($color-primary-dark, 0.9)
+    ),
+    url("../img/header-background.jpg");
+
+  height: 85vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  @supports (-webkit-clip-path: $header-polygon) or (clip-path: $header-polygon) {
+    -webkit-clip-path: $header-polygon;
+    clip-path: $header-polygon;
+    height: 95vh;
+  }
+
+  &__logo-box {
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+  }
+
+  &__logo {
+    width: 12rem;
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 45%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  &__text {
+    text-transform: uppercase;
+    color: $color-white;
+
+    &--main {
+      font-size: 6rem;
+      font-weight: 400;
+      letter-spacing: 1rem;
+      display: block;
+    }
+
+    &--sub {
+      font-size: 2rem;
+      letter-spacing: 0.3rem;
+      font-weight: 700;
+      display: block;
+    }
+  }
+}

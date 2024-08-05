@@ -1,0 +1,22 @@
+.btn {
+  &,
+  &:visited,
+  &:link {
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  &--primary {
+    background-color: $color-primary-light;
+  }
+
+  &--secondary {
+    background-color: $color-secondary-light;
+  }
+
+  &--tertiary {
+  }
+
+  &--animated {
+  }
+}
