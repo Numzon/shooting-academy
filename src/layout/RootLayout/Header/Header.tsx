@@ -1,26 +1,23 @@
-import logo from "../../../img/logo.png";
+import Button from '../../../components/Button';
+import Heading from './Heading';
+import Logo from './Logo';
 
 export const Header = () => {
   return (
-    <header className="header">
-      <div className="header__logo-box">
-        <img src={logo} alt="Logo" className="header__logo" />
-      </div>
-      <div className="header__text-box">
-        <h1 className="header__text">
-          <span className="header__text--main">Lorem ipsum?</span>
-          <span className="header__text--sub">
-            Expedita vero aut dolorem non d
-          </span>
-        </h1>
-        <a href="#" className="btn btn--secondary">
-          Klub
-        </a>
-        <a href="#" className="btn btn--primary">
-          Stwo
-        </a>
-      </div>
-    </header>
+    <>
+      <header className="header">
+        <Logo />
+        <Heading />
+        <div className="header__button-box">
+          <Button href="#" type="secondary" className="u-margin-left-medium" animated>
+            Lorem
+          </Button>
+          <Button href="#" type="tertiary" className="u-margin-left-medium" animated>
+            Lorem test
+          </Button>
+        </div>
+      </header>
+    </>
   );
 };
 

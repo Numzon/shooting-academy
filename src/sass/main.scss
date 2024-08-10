@@ -1,19 +1,20 @@
 //abstract
-@import "abstract/functions";
-@import "abstract/variables";
-@import "abstract/mixins";
+@import 'abstract/functions';
+@import 'abstract/variables';
+@import 'abstract/mixins';
 
 //base
-@import "base/base";
-@import "base/typography";
-@import "base/animations";
-@import "base/utilities";
+@import 'base/base';
+@import 'base/typography';
+@import 'base/animations';
+@import 'base/utilities';
 
 //conmponents
-@import "components/button";
+@import 'components/button';
 
 //layout
-@import "layout/header";
+@import 'layout/header';
+@import 'layout/navigation';
 
 //pages
-@import "pages/home";
+@import 'pages/home';

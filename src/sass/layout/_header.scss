@@ -4,7 +4,7 @@
       rgb($color-primary-light, 0.8),
       rgb($color-primary-dark, 0.9)
     ),
-    url("../img/header-background.jpg");
+    url('../img/header-background.jpg');
 
   height: 85vh;
   background-size: cover;
@@ -24,7 +24,8 @@
   }
 
   &__logo {
-    width: 12rem;
+    width: $header-logo-width;
+    cursor: pointer;
   }
 
   &__text-box {
@@ -40,17 +41,30 @@
     color: $color-white;
 
     &--main {
-      font-size: 6rem;
+      font-size: $header-text-main-font-size;
       font-weight: 400;
       letter-spacing: 1rem;
       display: block;
+      text-shadow: 0.3rem 0.3rem $color-black;
+
+      @include headerTextAnimation(moveInLeft);
     }
 
     &--sub {
-      font-size: 2rem;
+      font-size: $header-text-sub-font-size;
       letter-spacing: 0.3rem;
       font-weight: 700;
       display: block;
+      text-shadow: 0.3rem 0.3rem $color-black;
+
+      @include headerTextAnimation(moveInRight);
     }
+  }
+
+  &__button-box {
+    position: absolute;
+    left: 25%;
+    top: 60%;
+    transform: translate(-50%, -50%);
   }
 }

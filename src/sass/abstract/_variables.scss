@@ -1,11 +1,12 @@
+//COLOR
 $color-primary-light: #808774;
 $color-primary-dark: #3f3f3f;
 
-$color-secondary-light: #b3cde4;
-$color-secondary-dark: #537692;
+$color-secondary-light: #fffcd6;
+$color-secondary-dark: #b3b296;
 
-$color-tertiary-light: #86b9b0;
-$color-tertiary-dark: #4c7273;
+$color-tertiary-light: #b5a642;
+$color-tertiary-dark: #7f7a2e;
 
 $color-grey-dark: #262b15;
 $color-grey-light: #464b37;
@@ -13,4 +14,32 @@ $color-grey-light: #464b37;
 $color-white: #fff;
 $color-black: #000;
 
+//FONT SIZE
+$default-font-size: 1.8rem;
+
+//HEADER
 $header-polygon: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+$header-main-text-shadow: 0.5rem 0.5rem 0.5rem $color-black;
+$header-sub-text-shadow: 0.25rem 0.25rem 0.25rem $color-black;
+$header-logo-width: 12rem;
+$header-text-main-font-size: 6rem;
+$header-text-sub-font-size: 2rem;
+
+//BUTTON
+$button-box-shadow: 0 0.75rem 1.25rem rgba($color-black, 0.4);
+$button-box-shadow-active: 0 0.5rem 1rem rgba($color-black, 0.4);
+$button-border-radius: 15px;
+
+//NAVIGATION
+$navigation-button-size: 7rem;
+$navigation-button-border-radius: 100rem;
+$navigation-button-top: 4%;
+$navigation-button-right: 2%;
+$navigation-link-background-image: linear-gradient(
+  120deg,
+  transparent 0%,
+  transparent 50%,
+  $color-tertiary-light 50%
+);
+$navigation-link-padding: 1rem 3rem;
+$navigation-link-font-size: 3rem;

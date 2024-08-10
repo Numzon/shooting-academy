@@ -1,0 +1,143 @@
+.navigation {
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    width: $navigation-button-size;
+    height: $navigation-button-size;
+    position: fixed;
+    border-radius: $navigation-button-border-radius;
+    top: $navigation-button-top;
+    right: $navigation-button-right;
+    background-color: $color-white;
+    z-index: 2000;
+    cursor: pointer;
+  }
+
+  &__icon {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    @supports (user-select: none) or (-webkit-user-select: none) {
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    &,
+    &::after,
+    &::before {
+      background-color: $color-black;
+      display: inline-block;
+      width: 2.5rem;
+      height: 3.5px;
+    }
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      transition: 0.4s all;
+    }
+
+    &::after {
+      transform: translateY(-1rem);
+    }
+
+    &::before {
+      transform: translateY(1rem);
+    }
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    transform: rotate(135deg);
+    top: 0;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    transform: rotate(-135deg);
+    top: 0;
+  }
+
+  &__background {
+    background-image: linear-gradient($color-primary-light, $color-primary-dark);
+
+    position: fixed;
+    width: $navigation-button-size;
+    height: $navigation-button-size;
+    border-radius: $navigation-button-border-radius;
+    top: $navigation-button-top;
+    right: $navigation-button-right;
+    z-index: 1500;
+    transition: 0.4s all;
+  }
+
+  &__list {
+    position: fixed;
+    list-style: none;
+    top: 50%;
+    left: 0;
+    opacity: 0;
+    width: 0;
+    visibility: hidden;
+
+    margin: 0;
+    padding: 0;
+
+    letter-spacing: 0.7rem;
+    transform: translate(-100%, -50%);
+
+    z-index: 1500;
+    transition: 0.4s all;
+    user-select: none;
+  }
+
+  &__checkbox:checked ~ &__background {
+    transform: scale(100);
+  }
+
+  &__checkbox:checked ~ &__list {
+    transition-delay: 0.1s;
+    width: auto;
+    opacity: 1;
+    visibility: visible;
+
+    @include positionCenter;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $color-white;
+      padding: $navigation-link-padding;
+      position: relative;
+      font-size: $navigation-link-font-size;
+      background-image: $navigation-link-background-image;
+      font-weight: 300;
+      background-size: 230%;
+
+      transition: 0.4s all;
+    }
+
+    &:hover {
+      background-position: 90%;
+      transform: scale(1.1);
+    }
+  }
+}

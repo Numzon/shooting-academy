@@ -4,19 +4,79 @@
   &:link {
     text-decoration: none;
     text-transform: uppercase;
+    padding: 1.5rem 3rem;
+    font-size: $default-font-size;
+    border-radius: $button-border-radius;
+    box-shadow: $button-box-shadow;
+    position: relative;
+    display: inline-block;
+    transition: 0.15s all;
+    font-weight: 700;
+
+    border: none;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: $button-box-shadow;
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: $button-box-shadow-active;
+  }
+
+  &--animated {
+    animation-name: moveInBottom;
+    animation-duration: 1s;
+    animation-timing-function: ease-out 0.75s;
+    animation-fill-mode: backwards;
+
+    &:hover {
+      &::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+      }
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: $button-border-radius;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: all 0.4s;
   }
 
   &--primary {
     background-color: $color-primary-light;
+    color: $color-white;
+
+    &::after {
+      background-color: $color-primary-light;
+    }
   }
 
   &--secondary {
     background-color: $color-secondary-light;
+    color: $color-black;
+
+    &::after {
+      background-color: $color-secondary-light;
+    }
   }
 
   &--tertiary {
-  }
+    background-color: $color-tertiary-light;
+    color: $color-white;
 
-  &--animated {
+    &::after {
+      background-color: $color-tertiary-light;
+    }
   }
 }
