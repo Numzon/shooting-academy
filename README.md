@@ -1,30 +1,46 @@
-# React + TypeScript + Vite
+Shooting Academy project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Technologies:
 
-Currently, two official plugins are available:
+- React
+- TypeScript
+- Sass
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Currently used libraries:
 
-## Expanding the ESLint configuration
+- React Router Dom
+- React Hook Forms
+- React Query
+- PocketBase - api simulation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Purpose: Improve my Front-end skills
 
-- Configure the top-level `parserOptions` property like this:
+Project ends up when all points below are readys:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- HomePage / Landing Page
+- AuthenticationPage + PocketBase Auth configured
+- Contact Page / Contact Form + PocketBase stores thats data
+- Project is responsive for:
+  - 0 - 600px: Phone
+  - 600 - 900px: Tablet portrait
+  - 900 - 1200px: Tablet landscape
+  - 1200 - 1800px: Regular (default for this project)
+  - 1800px + : Big desktop
+- Pages can be handled by old browses (sass @support etc)
+- Most important pages are ready:
+  - Home
+  - Contact
+  - News
+- Has complete unit tests
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+There is a chance that number of points would be expanded.
+
+IMPORTANT:
+
+If you want to run this project - use laptop screen as it is not responsive yet
+Currently you don't have to deal with pocketbase app, just npm install and npm run dev
+
+TODO:
+
+1. Unit tests setup (many components that need testing already)
+2. Packages for clients section (cards with price on the background - card move to back when hovered)
