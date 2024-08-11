@@ -1,0 +1,34 @@
+.heading-primary {
+  background-clip: text;
+  background-image: linear-gradient($color-tertiary-light, $color-secondary-light);
+  color: transparent;
+  font-size: $heading-primary-font-size;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.2s all;
+  font-weight: $heading-primary-font-weight;
+  letter-spacing: $heading-primary-letter-spacing;
+  margin: 0;
+
+  &:hover {
+    transform: rotate(-4deg) scale(1.05);
+  }
+}
+
+.heading-secondary {
+  color: $color-white;
+  text-transform: uppercase;
+  font-weight: $heading-secondary-font-weight;
+  font-size: $heading-secondary-font-size;
+  margin: 0;
+
+  text-shadow: $heading-secondary-text-shadow;
+}
+
+.paraghraph {
+  color: $color-white;
+  font-size: $paragraph-font-size;
+  font-weight: $paragraph-font-weight;
+  letter-spacing: $paragraph-letter-spacing;
+  margin: 0;
+}

@@ -14,3 +14,11 @@
   animation-duration: 0.5s;
   animation-timing-function: ease-out;
 }
+
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}

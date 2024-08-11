@@ -1,0 +1,26 @@
+.row {
+  max-width: $grid-width;
+  margin: 0 auto;
+
+  @include clearfix;
+
+  @for $size from 1 through $max-number-of-grid-columns {
+    .col-#{$size} {
+      float: left;
+
+      width: calc(
+        $size *
+          (
+            (100% - ($max-number-of-grid-columns - 1) * (#{$gutter-horizontal})) /
+              $max-number-of-grid-columns
+          ) +
+          ($size - 1) *
+          #{$gutter-horizontal}
+      );
+
+      &:not(:last-child) {
+        margin-right: $gutter-horizontal;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.composition {
+  position: relative;
+
+  &__image {
+    position: absolute;
+    width: 60%;
+    border-radius: 2rem;
+    box-shadow: 0 1rem 1.5rem rgba($color-black, 0.3);
+    border: 3px $color-tertiary-light solid;
+
+    transition: 0.2s all;
+
+    &:hover {
+      z-index: 4;
+      transform: scale(1.1);
+      box-shadow: 0 1.5rem 2rem rgba($color-black, 0.5);
+    }
+  }
+
+  &__image--first {
+    top: 2rem;
+    left: 12rem;
+    z-index: 2;
+  }
+
+  &__image--second {
+    top: 15rem;
+    left: 2rem;
+    z-index: 3;
+  }
+
+  &__image--third {
+    top: 18rem;
+    right: 0rem;
+    z-index: 1;
+  }
+}

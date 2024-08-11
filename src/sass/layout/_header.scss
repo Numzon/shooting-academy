@@ -1,8 +1,9 @@
 .header {
   background-image: linear-gradient(
-      to right top,
-      rgb($color-primary-light, 0.8),
-      rgb($color-primary-dark, 0.9)
+      45deg,
+      rgb($color-primary-dark, 0.85) 40%,
+      rgb($color-primary-light, 0.9),
+      rgb($color-primary-light, 0.8)
     ),
     url('../img/header-background.jpg');
 
