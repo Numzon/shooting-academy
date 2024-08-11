@@ -3,17 +3,17 @@
 
   &__image {
     position: absolute;
-    width: 60%;
-    border-radius: 2rem;
-    box-shadow: 0 1rem 1.5rem rgba($color-black, 0.3);
-    border: 3px $color-tertiary-light solid;
+    width: $composition-image-width;
+    border-radius: $composition-border-radius;
+    box-shadow: $composition-box-shadow;
+    border: $composition-border;
 
     transition: 0.2s all;
 
     &:hover {
       z-index: 4;
       transform: scale(1.1);
-      box-shadow: 0 1.5rem 2rem rgba($color-black, 0.5);
+      box-shadow: $composition-box-shadow-hover;
     }
   }
 

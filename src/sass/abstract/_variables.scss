@@ -60,3 +60,10 @@ $grid-width: 114rem;
 $gutter-vertical: 8rem;
 $gutter-horizontal: 6rem;
 $max-number-of-grid-columns: 12;
+
+//COMPOSITION
+$composition-border-radius: 2rem;
+$composition-image-width: 60%;
+$composition-border: 0.3rem $color-tertiary-light solid;
+$composition-box-shadow: 0 1rem 1.5rem rgba($color-black, 0.3);
+$composition-box-shadow-hover: 0 1rem 1.5rem rgba($color-black, 0.3);
