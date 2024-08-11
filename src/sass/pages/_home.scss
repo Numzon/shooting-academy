@@ -6,6 +6,26 @@
     rgb($color-primary-light, 1)
   );
   padding-top: 20rem;
-  padding-bottom: 10rem;
+  padding-bottom: 20rem;
   margin-top: -15rem;
+}
+
+.offers-section {
+  background-image: linear-gradient(
+      45deg,
+      rgb($color-primary-dark, 1) 25%,
+      rgb($color-primary-dark, 0.8) 50%,
+      rgb($color-tertiary-light, 0.5)
+    ),
+    url('../img/offers-background-medium.jpg');
+  padding: 10rem 0;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transform: skewY(-6deg);
+  margin-top: -10rem;
+
+  & > * {
+    transform: skewY(6deg);
+  }
 }

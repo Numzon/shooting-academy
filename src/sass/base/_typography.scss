@@ -25,10 +25,18 @@
   text-shadow: $heading-secondary-text-shadow;
 }
 
-.paraghraph {
+.paragraph {
   color: $color-white;
   font-size: $paragraph-font-size;
   font-weight: $paragraph-font-weight;
   letter-spacing: $paragraph-letter-spacing;
+  margin: 0;
+}
+
+.heading-tertiary {
+  color: $color-black;
+  font-size: 1.9rem;
+  letter-spacing: 1.7px;
+  text-align: center;
   margin: 0;
 }

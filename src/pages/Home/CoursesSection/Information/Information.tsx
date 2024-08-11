@@ -1,23 +1,24 @@
+import HeadingSecondary from '../../../../components/HeadingSecondary';
+import Paragraph from '../../../../components/Paragraph';
+
 export const Information = () => {
   return (
     <>
       <div className="u-margin-bottom-medium">
         <div className="u-margin-bottom-small">
-          <h2 className="heading-secondary">Praesentium quod, facilis facere modi sed</h2>
+          <HeadingSecondary>Praesentium quod, facilis facere modi sed</HeadingSecondary>
         </div>
-        <p className="paraghraph">
+        <Paragraph>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo consequuntur sed, corporis
           dolorum reiciendis molestiae maiores vel accusamus magni! Culpa dignissimos dicta nesciunt
           eligendi iste eum, amet facere sit ratione.
-        </p>
+        </Paragraph>
       </div>
       <div className="u-margin-bottom-medium">
         <div className="u-margin-bottom-small">
-          <h2 className="heading-secondary">
-            Placeat debitis natus rem vel quas repellendus minus
-          </h2>
+          <HeadingSecondary>Placeat debitis natus rem vel quas repellendus minus</HeadingSecondary>
         </div>
-        <p className="paraghraph">
+        <Paragraph>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo consequuntur sed, corporis
           dolorum reiciendis molestiae maiores vel accusamus magni! Culpa dignissimos dicta nesciunt
           eligendi iste eum, amet facere sit ratione. Lorem ipsum dolor, sit amet consectetur
@@ -26,7 +27,7 @@ export const Information = () => {
           ratione. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo consequuntur sed,
           corporis dolorum reiciendis molestiae maiores vel accusamus magni! Culpa dignissimos dicta
           nesciunt eligendi iste eum, amet facere sit ratione.
-        </p>
+        </Paragraph>
       </div>
     </>
   );

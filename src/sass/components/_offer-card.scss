@@ -1,0 +1,37 @@
+.offer-card {
+  background-color: $offer-card-background-color;
+  padding: $offer-card-padding;
+  border-radius: $offer-card-border-radius;
+  text-align: center;
+  box-shadow: $offer-card-box-shadow;
+  transition: 0.2s all;
+
+  &__icon {
+    font-size: $offer-card-icon-font-size;
+    display: inline-block;
+    background-clip: text;
+    color: transparent;
+    background-image: $color-tertiary-dark;
+
+    &--tertiary {
+      background-image: linear-gradient($color-tertiary-dark, $color-tertiary-light);
+    }
+
+    &--secondary {
+      background-image: linear-gradient($color-secondary-dark, $color-secondary-light);
+    }
+
+    &--primary {
+      background-image: linear-gradient($color-primary-dark, $color-primary-light);
+    }
+  }
+
+  &__text {
+    font-size: $offer-card-text-font-size;
+  }
+
+  &:hover {
+    transform: $offer-card-hover-transform;
+    box-shadow: $offer-card-hover-box-shadow;
+  }
+}

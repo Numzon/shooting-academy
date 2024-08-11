@@ -20,7 +20,7 @@ $default-font-size: 1.8rem;
 //TYPHOGRAPHY
 $heading-primary-font-size: 3rem;
 $heading-primary-font-weight: 700;
-$heading-secondary-font-size: 2rem;
+$heading-secondary-font-size: 2.1rem;
 $heading-secondary-font-weight: 700;
 $heading-secondary-text-shadow: 2px 2px $color-black;
 $heading-primary-letter-spacing: 0.2rem;
@@ -67,3 +67,13 @@ $composition-image-width: 60%;
 $composition-border: 0.3rem $color-tertiary-light solid;
 $composition-box-shadow: 0 1rem 1.5rem rgba($color-black, 0.3);
 $composition-box-shadow-hover: 0 1rem 1.5rem rgba($color-black, 0.3);
+
+//OFFER CARD
+$offer-card-padding: 3rem;
+$offer-card-background-color: rgba($color-white, 0.7);
+$offer-card-border-radius: 2rem;
+$offer-card-box-shadow: 0 1rem 1.5rem rgba($color-black, 0.3);
+$offer-card-icon-font-size: 6rem;
+$offer-card-text-font-size: scale(1.03) translateY(-1rem);
+$offer-card-hover-transform: 1.5rem;
+$offer-card-hover-box-shadow: 0 1.5rem 2rem rgba($color-black, 0.5);

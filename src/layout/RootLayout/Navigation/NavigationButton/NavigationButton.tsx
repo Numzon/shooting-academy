@@ -10,7 +10,7 @@ export const NavigationButton = () => {
         className="navigation__checkbox"
         id="navigation-toggle"
         checked={isChecked}
-        onClick={() => setIsChecked(!isChecked)}
+        onChange={() => setIsChecked(!isChecked)}
       />
       <label htmlFor="navigation-toggle" className="navigation__button">
         <span className="navigation__icon">&nbsp;</span>

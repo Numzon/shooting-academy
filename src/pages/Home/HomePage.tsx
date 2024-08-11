@@ -1,12 +1,15 @@
 import CoursesSection from './CoursesSection';
+import OffersSection from './OffersSection';
 
 export const HomePage = () => {
   return (
     <>
       <CoursesSection />
-      {/* <section>STRZELNICA – NASZA OFERTA (cards) img/video background</section>
-      <section>STRZELNICA – WIELE OPCJI DLA KAŻDEGO (cards with imgs)</section>
-      <section>Contact form</section> */}
+      <OffersSection />
+      {/* 
+      <section>Pakiety z ceną na odwrocie karty (cards with imgs)</section>
+      <section>Contact form + zapis do pocketbase</section> 
+      */}
     </>
   );
 };

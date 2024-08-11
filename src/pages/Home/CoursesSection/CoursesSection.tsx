@@ -1,25 +1,26 @@
 import HeadingPrimary from '../../../components/HeadingPrimary';
 import Composition from './Composition';
 import Information from './Information';
+import { Row, Column } from '../../../components/Grid';
 
 export const CoursesSection = () => {
   return (
     <section className="courses-section">
-      <div className="row">
-        <div className="cal-12">
+      <Row>
+        <Column size="12">
           <div className="u-margin-bottom-huge">
             <HeadingPrimary>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit
             </HeadingPrimary>
           </div>
-        </div>
-        <div className="col-6">
+        </Column>
+        <Column size="6">
           <Information />
-        </div>
-        <div className="col-6">
+        </Column>
+        <Column size="6">
           <Composition />
-        </div>
-      </div>
+        </Column>
+      </Row>
     </section>
   );
 };
