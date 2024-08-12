@@ -11,16 +11,23 @@ Currently used libraries:
 - React Router Dom
 - React Hook Forms
 - React Query
+- Zod - form validation
 - PocketBase - api simulation
+
+Tests:
+
+- vitest
+- testing-library's
+- istambul - for coverage
 
 Purpose: Improve my Front-end skills
 
-Project ends up when all points below are readys:
+Project ends up when all points below are ready:
 
 - HomePage / Landing Page
 - AuthenticationPage + PocketBase Auth configured
 - Contact Page / Contact Form + PocketBase stores thats data
-- Project is responsive for:
+- Project handles responsiveness for:
   - 0 - 600px: Phone
   - 600 - 900px: Tablet portrait
   - 900 - 1200px: Tablet landscape

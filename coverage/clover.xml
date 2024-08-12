@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1723477235916" clover="3.2.0">
+  <project timestamp="1723477235916" name="All files">
+    <metrics statements="80" coveredstatements="65" conditionals="16" coveredconditionals="7" methods="45" coveredmethods="35" elements="141" coveredelements="107" complexity="0" loc="80" ncloc="80" packages="32" files="33" classes="33"/>
+    <package name="src">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="App.tsx" path="C:/Learning/shooting-academy/src/App.tsx">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      </file>
+    </package>
+    <package name="src.components.Button">
+      <metrics statements="10" coveredstatements="10" conditionals="6" coveredconditionals="3" methods="2" coveredmethods="2"/>
+      <file name="Button.tsx" path="C:/Learning/shooting-academy/src/components/Button/Button.tsx">
+        <metrics statements="10" coveredstatements="10" conditionals="6" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="21" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="25" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="29" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="33" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Grid">
+      <metrics statements="7" coveredstatements="6" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3"/>
+      <file name="Column.tsx" path="C:/Learning/shooting-academy/src/components/Grid/Column.tsx">
+        <metrics statements="6" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="7" type="stmt"/>
+        <line num="14" count="7" type="stmt"/>
+        <line num="15" count="7" type="cond" truecount="1" falsecount="1"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="19" count="7" type="stmt"/>
+      </file>
+      <file name="Row.tsx" path="C:/Learning/shooting-academy/src/components/Grid/Row.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.HeadingPrimary">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="HeadingPrimary.tsx" path="C:/Learning/shooting-academy/src/components/HeadingPrimary/HeadingPrimary.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.HeadingSecondary">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="HeadingSecondary.tsx" path="C:/Learning/shooting-academy/src/components/HeadingSecondary/HeadingSecondary.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.HeadingTertiary">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="HeadingTertiary.tsx" path="C:/Learning/shooting-academy/src/components/HeadingTertiary/HeadingTertiary.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.OfferCard">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="OfferCard.tsx" path="C:/Learning/shooting-academy/src/components/OfferCard/OfferCard.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.OfferCard.OfferCardIcon">
+      <metrics statements="9" coveredstatements="8" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <file name="OfferCardIcon.tsx" path="C:/Learning/shooting-academy/src/components/OfferCard/OfferCardIcon/OfferCardIcon.tsx">
+        <metrics statements="9" coveredstatements="8" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="4" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="21" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="22" count="4" type="stmt"/>
+        <line num="25" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="29" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.OfferCard.OfferCardText">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="OfferCardText.tsx" path="C:/Learning/shooting-academy/src/components/OfferCard/OfferCardText/OfferCardText.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.OfferCard.OfferCardTitle">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="OfferCardTitle.tsx" path="C:/Learning/shooting-academy/src/components/OfferCard/OfferCardTitle/OfferCardTitle.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="7" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Paragraph">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Paragraph.tsx" path="C:/Learning/shooting-academy/src/components/Paragraph/Paragraph.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.contexts.NavigationCheckboxContext">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="NavigationCheckboxContext.tsx" path="C:/Learning/shooting-academy/src/contexts/NavigationCheckboxContext/NavigationCheckboxContext.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.contexts.NavigationCheckboxContext.hooks">
+      <metrics statements="5" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <file name="useNavigationCheckbox.ts" path="C:/Learning/shooting-academy/src/contexts/NavigationCheckboxContext/hooks/useNavigationCheckbox.ts">
+        <metrics statements="5" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="7" count="7" type="cond" truecount="1" falsecount="1"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="11" count="7" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.layout.RootLayout">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="RootLayout.tsx" path="C:/Learning/shooting-academy/src/layout/RootLayout/RootLayout.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.layout.RootLayout.Header">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Header.tsx" path="C:/Learning/shooting-academy/src/layout/RootLayout/Header/Header.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.layout.RootLayout.Header.Heading">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Heading.tsx" path="C:/Learning/shooting-academy/src/layout/RootLayout/Header/Heading/Heading.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.layout.RootLayout.Header.Logo">
+      <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <file name="Logo.tsx" path="C:/Learning/shooting-academy/src/layout/RootLayout/Header/Logo/Logo.tsx">
+        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.layout.RootLayout.Main">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Main.tsx" path="C:/Learning/shooting-academy/src/layout/RootLayout/Main/Main.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.layout.RootLayout.Navigation">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Navigation.tsx" path="C:/Learning/shooting-academy/src/layout/RootLayout/Navigation/Navigation.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.layout.RootLayout.Navigation.NavigationButton">
+      <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <file name="NavigationButton.tsx" path="C:/Learning/shooting-academy/src/layout/RootLayout/Navigation/NavigationButton/NavigationButton.tsx">
+        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.layout.RootLayout.Navigation.NavigationList">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="NavigationList.tsx" path="C:/Learning/shooting-academy/src/layout/RootLayout/Navigation/NavigationList/NavigationList.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.layout.RootLayout.Navigation.NavigationList.NavigationItem">
+      <metrics statements="8" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <file name="NavigationItem.tsx" path="C:/Learning/shooting-academy/src/layout/RootLayout/Navigation/NavigationList/NavigationItem/NavigationItem.tsx">
+        <metrics statements="8" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages.Home">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="HomePage.tsx" path="C:/Learning/shooting-academy/src/pages/Home/HomePage.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages.Home.CoursesSection">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="CoursesSection.tsx" path="C:/Learning/shooting-academy/src/pages/Home/CoursesSection/CoursesSection.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages.Home.CoursesSection.Composition">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Composition.tsx" path="C:/Learning/shooting-academy/src/pages/Home/CoursesSection/Composition/Composition.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages.Home.CoursesSection.Information">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Information.tsx" path="C:/Learning/shooting-academy/src/pages/Home/CoursesSection/Information/Information.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages.Home.OffersSection">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="OffersSection.tsx" path="C:/Learning/shooting-academy/src/pages/Home/OffersSection/OffersSection.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages.Home.OffersSection.HomeOfferCards">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="HomeOfferCards.tsx" path="C:/Learning/shooting-academy/src/pages/Home/OffersSection/HomeOfferCards/HomeOfferCards.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="9" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages.News">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="NewsPage.tsx" path="C:/Learning/shooting-academy/src/pages/News/NewsPage.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.pages.NotFound">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="NotFoundPage.tsx" path="C:/Learning/shooting-academy/src/pages/NotFound/NotFoundPage.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.routes">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="RouteProvider.tsx" path="C:/Learning/shooting-academy/src/routes/RouteProvider.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="22" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.routes.hooks">
+      <metrics statements="10" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="2"/>
+      <file name="useRouter.ts" path="C:/Learning/shooting-academy/src/routes/hooks/useRouter.ts">
+        <metrics statements="10" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="2"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="7" count="7" type="stmt"/>
+        <line num="8" count="7" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="18" count="7" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
