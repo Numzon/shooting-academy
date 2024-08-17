@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import useNavigationCheckbox from '../../../../contexts/NavigationCheckboxContext/hooks';
 
 export const NavigationButton = () => {
@@ -12,7 +13,11 @@ export const NavigationButton = () => {
         checked={isChecked}
         onChange={() => setIsChecked(!isChecked)}
       />
-      <label htmlFor="navigation-toggle" className="navigation__button">
+      <label
+        htmlFor="navigation-toggle"
+        className="navigation__button"
+        data-testid="checkbox-label"
+      >
         <span className="navigation__icon">&nbsp;</span>
       </label>
     </>

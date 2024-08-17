@@ -6,7 +6,14 @@ export const Logo = () => {
 
   return (
     <div className="header__logo-box">
-      <img src={logo} alt="Logo" className="header__logo" onClick={() => router.push('/')} />
+      <img
+        src={logo}
+        alt="Logo"
+        className="header__logo"
+        onClick={() => {
+          router.push('/');
+        }}
+      />
     </div>
   );
 };
