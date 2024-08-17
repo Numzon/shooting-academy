@@ -5,8 +5,9 @@ import React from 'react';
 if (import.meta.vitest) {
   const { it, describe, expect, vi, afterEach } = import.meta.vitest;
 
-  const { navigateMock } = vi.hoisted(() => ({
+  const { navigateMock, reloadMock } = vi.hoisted(() => ({
     navigateMock: vi.fn(),
+    reloadMock: vi.fn(),
   }));
 
   vi.mock('react-router-dom', () => ({
@@ -70,7 +71,13 @@ if (import.meta.vitest) {
       expect(result).not.toBeNull();
     });
 
-    it('useRouter reload doesnt use navigate', () => {
+    it('useRouter reload uses window.location.reload', () => {
+      Object.defineProperty(window, 'location', {
+        value: {
+          reload: reloadMock,
+        },
+      });
+
       const wrapper = ({ children }: { children: React.ReactNode }) => (
         <React.StrictMode>{children}</React.StrictMode>
       );
@@ -79,6 +86,7 @@ if (import.meta.vitest) {
       result.current.reload();
 
       expect(navigateMock).not.toHaveBeenCalled();
+      expect(reloadMock).toHaveBeenCalledOnce();
       expect(result).not.toBeNull();
     });
 
