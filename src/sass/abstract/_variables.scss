@@ -77,3 +77,36 @@ $offer-card-icon-font-size: 6rem;
 $offer-card-text-font-size: 1.5rem;
 $offer-card-hover-transform: scale(1.03) translateY(-1rem);
 $offer-card-hover-box-shadow: 0 1.5rem 2rem rgba($color-black, 0.5);
+
+//BUNDLE CARD
+$bundle-card-box-shadow: 0 1.5rem 2rem rgba($color-black, 0.5);
+$bundle-card-heading-font-size: 2.5rem;
+$bundle-card-height: 50rem;
+$bundle-card-border-radius: 15px;
+$bundle-card-perspective: 150rem;
+
+//BUNDLE CARD FRONT CARD
+$bundle-card-picture-height: 23rem;
+$bundle-card-picture-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+$bundle-card-heading-width: 75%;
+$bundle-card-heading-top: 12rem;
+$bundle-card-heading-right: 1rem;
+$bundle-card-heading-line-height: 4rem;
+$bundle-card-heading-font-weight: 300;
+$bundle-card-heading-span-padding: 1rem 1.5rem;
+$bundle-card-details-padding: 3rem;
+$bundle-card-details-width: 80%;
+$bundle-card-details-dates-ul-width: 80%;
+$bundle-card-details-li-font-size: 1.5rem;
+$bundle-card-details-li-padding: 1.2rem;
+$bundle-card-details-li-border-bottom: 1px rgb($color-grey-light, 0.4) solid;
+
+//BUNDLE CARD BACK CARD
+$bundle-card-cta-price-box-font-weight: 300;
+$bundle-card-cta-price-text-font-size: 1.5rem;
+$bundle-card-cta-price-font-size: 5rem;
+$bundle-card-cta-price-font-weight: 100;
+$bundle-card-cta-dates-font-size: 2rem;
+$bundle-card-cta-dates-ul-width: 80%;
+$bundle-card-cta-dates-li-padding: 1rem;
+$bundle-card-cta-dates-li-border-bottom: 1px $color-grey-light solid;
