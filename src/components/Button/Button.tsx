@@ -1,6 +1,6 @@
 import { ComponentPropsWithoutRef } from 'react';
 
-type ButtonType = 'primary' | 'secondary' | 'tertiary';
+export type ButtonType = 'primary' | 'secondary' | 'tertiary';
 
 type ButtonProps = {
   children?: React.ReactNode;

@@ -1,0 +1,215 @@
+.bundle-card {
+  //FUNCTIONALITY
+  position: relative;
+  height: $bundle-card-height;
+
+  @supports (perspective: $bundle-card-perspective) or (-moz-perspective: $bundle-card-perspective) {
+    perspective: $bundle-card-perspective;
+    -moz-perspective: $bundle-card-perspective;
+  }
+
+  &__side {
+    box-shadow: $bundle-card-box-shadow;
+    border-radius: $bundle-card-border-radius;
+    position: absolute;
+    height: $bundle-card-height;
+    width: 100%;
+    overflow: hidden;
+    transition: 0.8s all ease;
+
+    @supports (backface-visibility: hidden) or (-webkit-backface-visibility: hidden) {
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+
+    &--front {
+      background-color: rgb($color-white, 0.85);
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+
+      &-primary {
+        background-image: linear-gradient(
+          45deg,
+          rgb($color-primary-light, 1),
+          rgb($color-primary-light, 0.7)
+        );
+
+        color: $color-white;
+      }
+
+      &-secondary {
+        background-image: linear-gradient(
+          45deg,
+          rgb($color-secondary-light, 1),
+          rgb($color-secondary-dark, 1)
+        );
+
+        color: $color-black;
+      }
+
+      &-tertiary {
+        background-image: linear-gradient(
+          45deg,
+          rgb($color-tertiary-light, 1),
+          rgb($color-tertiary-dark, 1)
+        );
+
+        color: $color-white;
+      }
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  //FRONT CARD
+  &__picture {
+    background-size: cover;
+    background-position: center;
+    height: $bundle-card-picture-height;
+    border-top-left-radius: $bundle-card-border-radius;
+    border-top-right-radius: $bundle-card-border-radius;
+
+    @supports (clip-path: $bundle-card-picture-clip-path) {
+      clip-path: $bundle-card-picture-clip-path;
+    }
+
+    &--tertiary {
+      background-image: linear-gradient(
+          to right top,
+          rgb($color-tertiary-light, 0.2),
+          rgb($color-tertiary-dark, 0.8)
+        ),
+        url('../img/bundle-card-medium-1.jpg');
+    }
+
+    &--secondary {
+      background-image: linear-gradient(
+          to right top,
+          rgb($color-secondary-light, 0.2),
+          rgb($color-secondary-dark, 0.8)
+        ),
+        url('../img/bundle-card-medium-2.jpg');
+    }
+
+    &--primary {
+      background-image: linear-gradient(
+          to right top,
+          rgb($color-primary-light, 0.2),
+          rgb($color-primary-light, 0.9)
+        ),
+        url('../img/bundle-card-medium-3.jpg');
+    }
+  }
+
+  &__heading {
+    font-size: $bundle-card-heading-font-size;
+    text-transform: uppercase;
+    position: absolute;
+    text-align: right;
+    width: $bundle-card-heading-width;
+    top: $bundle-card-heading-top;
+    right: $bundle-card-heading-right;
+    line-height: $bundle-card-heading-line-height;
+    color: $color-white;
+    font-weight: $bundle-card-heading-font-weight;
+  }
+
+  &__heading-span {
+    padding: $bundle-card-heading-span-padding;
+
+    @supports (-webkit-box-decoration-break: clone) or (box-decoration-break: clone) {
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+    }
+
+    &--tertiary {
+      background-image: linear-gradient(
+        to right top,
+        rgb($color-tertiary-light, 0.5),
+        rgb($color-tertiary-dark, 0.9)
+      );
+    }
+
+    &--secondary {
+      background-image: linear-gradient(
+        to right top,
+        rgb($color-secondary-dark, 0.9),
+        rgb($color-secondary-light, 0.5)
+      );
+    }
+
+    &--primary {
+      background-image: linear-gradient(
+        to right top,
+        rgb($color-primary-light, 0.5),
+        rgb($color-primary-dark, 0.6)
+      );
+    }
+  }
+
+  &__details {
+    padding: $bundle-card-details-padding;
+
+    ul {
+      padding: 0;
+      margin: 0 auto;
+      list-style: none;
+      width: $bundle-card-details-dates-ul-width;
+
+      li {
+        text-align: center;
+        font-size: $bundle-card-details-li-font-size;
+        padding: $bundle-card-details-li-padding;
+
+        &:not(:last-child) {
+          border-bottom: $bundle-card-details-li-border-bottom;
+        }
+      }
+    }
+  }
+
+  //BACK CARD
+  &__cta {
+    text-align: center;
+  }
+
+  &__price-box {
+    font-weight: $bundle-card-cta-price-box-font-weight;
+  }
+
+  &__price-text {
+    font-size: $bundle-card-cta-price-text-font-size;
+  }
+
+  &__price {
+    font-size: $bundle-card-cta-price-font-size;
+    font-weight: $bundle-card-cta-price-font-weight;
+  }
+
+  &__dates {
+    margin: 0 auto;
+    font-size: $bundle-card-cta-dates-font-size;
+    ul {
+      padding: 0;
+      list-style: none;
+      width: $bundle-card-cta-dates-ul-width;
+      margin: 0 auto;
+
+      li {
+        padding: $bundle-card-cta-dates-li-padding;
+
+        &:not(:last-child) {
+          border-bottom: $bundle-card-cta-dates-li-border-bottom;
+        }
+      }
+    }
+  }
+}

@@ -4,3 +4,4 @@ export * from './HeadingSecondary';
 export * from './HeadingTertiary';
 export * from './Paragraph';
 export * from './OfferCard';
+export * from './BundleCard';
