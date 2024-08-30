@@ -14,6 +14,9 @@ $color-grey-light: #464b37;
 $color-white: #fff;
 $color-black: #000;
 
+$color-invalid: orangered;
+$color-valid: greenyellow;
+
 //FONT SIZE
 $default-font-size: 1.8rem;
 
@@ -110,3 +113,44 @@ $bundle-card-cta-dates-font-size: 2rem;
 $bundle-card-cta-dates-ul-width: 80%;
 $bundle-card-cta-dates-li-padding: 1rem;
 $bundle-card-cta-dates-li-border-bottom: 1px $color-grey-light solid;
+
+//CONTACT FORM
+
+$contact-height: 51rem;
+$contact-border-radius: 15px;
+$contact-form-padding: 6rem;
+$contact-form-width: 43%;
+$contact-button-left: 25%;
+
+//FORM
+$form-group-margin-bottom: 3rem;
+
+//TEXTBOX
+$textbox-label-font-size: 1.2rem;
+$textbox-label-top: 50%;
+$textbox-label-translate: translateY(2.8rem);
+$textbox-label-left: 1.5rem;
+$textbox-label-transition: all 0.2s ease-in;
+
+$textbox-input-background-color: rgba($color-white, 0.9);
+$textbox-input-width: 80%;
+$textbox-input-font-size: 1.8rem;
+$textbox-input-padding: 1rem 1.5rem;
+$textbox-input-border-radius: 1rem;
+$textbox-input-transition: all 0.2s ease-in;
+
+$textbox-input-focus-box-shadow: 0 1rem 2rem rgba($color-black, 0.3);
+$textbox-input-focus-valid: $color-valid solid 2px;
+
+//RADIO
+$radio-box-width: 50%;
+$radio-label-font-size: 1.8rem;
+$radio-label-padding-left: 3rem;
+
+$radio-button-outline-size: 1.8rem;
+$radio-button-outline-border: solid 3px $color-tertiary-light;
+$radio-button-inner-square-size: 1.5rem;
+$radio-button-circle-border-radius: 2rem;
+$radio-button-inner-square-center-transform: translate(27%, 27%);
+$radio-button-checked-change-transition: opacity 0.2s ease-in;
+$radio-button-invalid-state-border: solid 3px $color-invalid;
