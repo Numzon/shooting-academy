@@ -1,0 +1,21 @@
+.contact {
+  background-image: linear-gradient(100deg, rgb($color-primary-dark, 0.95) 50%, transparent 50%),
+    url(../../src/img/contact-background-large.jpg);
+  background-position: center;
+  background-size: cover;
+  height: $contact-height;
+  border-radius: $button-border-radius;
+  box-shadow: $button-box-shadow;
+
+  &__form {
+    padding: $contact-form-padding;
+    width: $contact-form-width;
+  }
+
+  &__button {
+    & > * {
+      position: absolute;
+      left: $contact-button-left;
+    }
+  }
+}

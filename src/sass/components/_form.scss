@@ -1,0 +1,101 @@
+.form {
+  &__group {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: $form-group-margin-bottom;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    font-size: $textbox-label-font-size;
+    top: $textbox-label-top;
+    transform: $textbox-label-translate;
+    left: $textbox-label-left;
+    color: $color-white;
+
+    transition: $textbox-label-transition;
+  }
+
+  &__input {
+    background-color: $textbox-input-background-color;
+    width: $textbox-input-width;
+    font-size: $textbox-input-font-size;
+    padding: $textbox-input-padding;
+    border-radius: $textbox-input-border-radius;
+    font-family: inherit;
+    color: inherit;
+    display: block;
+    transition: $textbox-input-transition;
+
+    &:focus {
+      outline: none;
+      box-shadow: $textbox-input-focus-box-shadow;
+      border: $textbox-input-focus-valid;
+    }
+
+    &:focus:invalid {
+      border-color: $color-invalid;
+    }
+  }
+
+  &__input:placeholder-shown + &__label {
+    visibility: hidden;
+    transform: translateY(0);
+  }
+
+  &__radio-box {
+    width: $radio-box-width;
+    display: inline-block;
+    position: relative;
+  }
+
+  &__radio-label {
+    color: $color-white;
+    font-size: $radio-label-font-size;
+    padding-left: $radio-label-padding-left;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      border: $radio-button-outline-border;
+      display: inline-block;
+      width: $radio-button-outline-size;
+      height: $radio-button-outline-size;
+      border-radius: $radio-button-circle-border-radius;
+      position: absolute;
+      left: 0;
+    }
+
+    &::after {
+      content: '';
+      opacity: 0;
+      background-color: $color-tertiary-light;
+      display: inline-block;
+      width: $radio-button-inner-square-size;
+      height: $radio-button-inner-square-size;
+      border-radius: $radio-button-circle-border-radius;
+      position: absolute;
+      left: 0;
+      transform: $radio-button-inner-square-center-transform;
+      transition: $radio-button-checked-change-transition;
+    }
+
+    &::after:invalid {
+      background-color: $color-invalid;
+    }
+
+    &::before:invalid {
+      border: $radio-button-invalid-state-border;
+    }
+  }
+
+  &__radio-input {
+    display: none;
+  }
+
+  &__radio-input:checked + &__radio-label::after {
+    opacity: 1;
+  }
+}
