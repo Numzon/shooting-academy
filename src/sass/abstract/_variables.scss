@@ -154,3 +154,17 @@ $radio-button-circle-border-radius: 2rem;
 $radio-button-inner-square-center-transform: translate(27%, 27%);
 $radio-button-checked-change-transition: opacity 0.2s ease-in;
 $radio-button-invalid-state-border: solid 3px $color-invalid;
+
+//FOOTER
+$footer-font-size: 1.6rem;
+$footer-logo-size: 15rem;
+$footer-border-top: 1px solid $color-grey-light;
+$footer-font-weight: 400;
+$footer-element-padding: 0.25rem 0.5rem;
+$footer-background-image: linear-gradient(45deg, $color-tertiary-dark 45%, $color-tertiary-light);
+$footer-clip-path: polygon(0 24vh, 100% 0, 100% 100%, 0 100%);
+
+$footer-list-items-transition: all 0.2s;
+$footer-list-item-margin-right: 1rem;
+$footer-list-item-box-shadow-hover: 0 0.5rem 1rem rgba($color-black, 0.2);
+$footer-list-item-trasnform-hover: scale(1.03) rotate(3deg);

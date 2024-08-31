@@ -2,12 +2,13 @@ import HeadingPrimary from '../../../components/HeadingPrimary';
 import TextField from '../../../components/TextField';
 import Button from '../../../components/Button';
 import { RadioButton, RadioGroup } from '../../../components/RadioGroup';
+import { Column, Row } from '../../../components/Grid';
 
 export const ContactSection = () => {
   return (
     <div className="contact-section">
-      <div className="row">
-        <div className="col-12">
+      <Row>
+        <Column size="12">
           <div className="contact">
             <div className="contact__form">
               <div className="u-margin-bottom-medium">
@@ -34,8 +35,8 @@ export const ContactSection = () => {
               </form>
             </div>
           </div>
-        </div>
-      </div>
+        </Column>
+      </Row>
     </div>
   );
 };
