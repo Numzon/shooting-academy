@@ -1,12 +1,12 @@
 import { BundleCardPrice } from '../BundleCardPrice';
 import Button, { ButtonType } from '../../../components/Button/Button';
+import useHomePopup from '../../../contexts/HomePopupContext/hooks';
 
 export type BackSideColor = 'primary' | 'secondary' | 'tertiary';
 
 type BundleCardSideBackProps = {
   price: string;
   buttonType: ButtonType;
-  to: string;
   color: BackSideColor;
   children: Array<React.ReactElement<'li'>> | React.ReactElement<'li'>;
 };
@@ -14,10 +14,11 @@ type BundleCardSideBackProps = {
 export const BundleCardSideBack = ({
   price,
   buttonType,
-  to,
   color,
   children,
 }: BundleCardSideBackProps) => {
+  const { toggle } = useHomePopup();
+
   return (
     <div className={`bundle-card__side bundle-card__side--back bundle-card__side--back-${color}`}>
       <div className="bundle-card__cta">
@@ -26,8 +27,15 @@ export const BundleCardSideBack = ({
           <ul>{children}</ul>
         </div>
         <div className="u-text-align-center u-margin-top-medium">
-          <Button type={buttonType} href={to}>
-            Buy now!
+          <Button
+            type={buttonType}
+            onClick={(event) => {
+              event.preventDefault();
+              event.stopPropagation();
+              toggle();
+            }}
+          >
+            Show popup!
           </Button>
         </div>
       </div>

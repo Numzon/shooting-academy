@@ -10,11 +10,7 @@ type ButtonProps = {
 
 export const Button = ({ className, children, type, animated, ...fieldProps }: ButtonProps) => {
   const getClassName = () => {
-    const buttonStyles = ['btn'];
-
-    if (type) {
-      buttonStyles.push('btn--' + type);
-    }
+    const buttonStyles = ['btn', `btn--${type}`];
 
     if (animated) {
       buttonStyles.push('btn--animated');
