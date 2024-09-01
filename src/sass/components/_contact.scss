@@ -1,21 +1,49 @@
 .contact {
-  background-image: linear-gradient(100deg, rgb($color-primary-dark, 0.95) 50%, transparent 50%),
+  background-image: $contact-background-image-linear-gradient,
     url(../../src/img/contact-background-large.jpg);
   background-position: center;
   background-size: cover;
   height: $contact-height;
   border-radius: $button-border-radius;
   box-shadow: $button-box-shadow;
+  box-sizing: border-box;
+
+  @include respond(tab-port) {
+    background-image: $contact-background-image-linear-gradient-tab-port,
+      url(../../src/img/contact-background-large.jpg);
+    height: $contact-height-tab-port;
+  }
+
+  @include respond(phone) {
+    height: $contact-height-phone;
+  }
 
   &__form {
+    box-sizing: border-box;
     padding: $contact-form-padding;
     width: $contact-form-width;
+
+    @include respond(tab-port) {
+      width: 100%;
+      padding: $contact-form-padding-tab-port;
+    }
+
+    .form {
+      @include respond(tab-port) {
+        margin-top: $contact-margin-top-form-tab-port;
+      }
+    }
   }
 
   &__button {
     & > * {
       position: absolute;
       left: $contact-button-left;
+
+      @include respond(tab-port) {
+        bottom: $contact-button-bottom-form-tab-port;
+        @include absoluteHorizontalCenter;
+      }
     }
   }
 }

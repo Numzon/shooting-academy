@@ -7,6 +7,18 @@
   clip-path: $footer-clip-path;
   background-image: $footer-background-image;
 
+  @include respond(tab-port) {
+    margin-top: -15rem;
+    padding-top: 15rem;
+    padding-bottom: 10rem;
+    clip-path: $footer-clip-path-tab-port;
+  }
+
+  @include respond(big-desktop) {
+    clip-path: $footer-clip-path-big-desktop;
+    margin-top: -15rem;
+  }
+
   &__logo {
     height: $footer-logo-size;
   }

@@ -7,7 +7,7 @@
     ),
     url('../img/header-background.jpg');
 
-  height: 85vh;
+  height: $header-height-not-supports-clip-path;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -15,13 +15,35 @@
   @supports (-webkit-clip-path: $header-polygon) or (clip-path: $header-polygon) {
     -webkit-clip-path: $header-polygon;
     clip-path: $header-polygon;
-    height: 95vh;
+    height: $header-height;
+
+    @include respond(tab-port) {
+      -webkit-clip-path: $header-polygon-tab-port;
+      clip-path: $header-polygon-tab-port;
+      height: $header-height-tab-port;
+    }
+
+    @include respond(phone) {
+      -webkit-clip-path: $header-polygon-phone;
+      clip-path: $header-polygon-phone;
+      height: $header-height-phone;
+    }
   }
 
   &__logo-box {
     position: absolute;
-    left: 2rem;
-    top: 2rem;
+    left: $header-logo-box-left;
+    top: $header-logo-box-top;
+
+    @include respond(tab-land) {
+      left: $header-logo-box-left-tab-land;
+      top: $header-logo-box-top-tab-land;
+    }
+
+    @include respond(tab-port) {
+      left: $header-logo-box-left-tab-port;
+      top: $header-logo-box-top-tab-port;
+    }
   }
 
   &__logo {
@@ -31,10 +53,18 @@
 
   &__text-box {
     position: absolute;
-    top: 45%;
-    left: 25%;
+    top: $header-text-box-top;
+    left: $header-text-box-left;
     transform: translate(-50%, -50%);
     text-align: center;
+
+    @include respond(tab-land) {
+      left: $header-text-box-left-tab-land;
+    }
+
+    @include respond(tab-port) {
+      left: $header-text-box-left-tab-port;
+    }
   }
 
   &__text {
@@ -44,28 +74,56 @@
     &--main {
       font-size: $header-text-main-font-size;
       font-weight: 400;
-      letter-spacing: 1rem;
+      letter-spacing: $header-text-main-letter-spacing;
       display: block;
-      text-shadow: 0.3rem 0.3rem $color-black;
+      text-shadow: $header-text-shadow;
 
       @include headerTextAnimation(moveInLeft);
+
+      @include respond(tab-port) {
+        letter-spacing: $header-text-main-letter-spacing-tab-port;
+        font-size: $header-text-main-font-size-tab-port;
+      }
+
+      @include respond(phone) {
+        letter-spacing: $header-text-main-letter-spacing-phone;
+        font-size: $header-text-main-font-size-phone;
+      }
     }
 
     &--sub {
       font-size: $header-text-sub-font-size;
-      letter-spacing: 0.3rem;
+      letter-spacing: $header-text-sub-letter-spacing;
       font-weight: 700;
       display: block;
-      text-shadow: 0.3rem 0.3rem $color-black;
+      text-shadow: $header-text-shadow;
 
       @include headerTextAnimation(moveInRight);
+
+      @include respond(tab-port) {
+        letter-spacing: $header-text-sub-letter-spacing-tab-port;
+        font-size: $header-text-sub-font-size-tab-port;
+      }
+
+      @include respond(phone) {
+        letter-spacing: $header-text-sub-letter-spacing-phone;
+        font-size: $header-text-sub-font-size-phone;
+      }
     }
   }
 
   &__button-box {
     position: absolute;
-    left: 25%;
-    top: 60%;
+    left: $header-text-box-left;
+    top: $header-button-box-top;
     transform: translate(-50%, -50%);
+
+    @include respond(tab-land) {
+      left: $header-text-box-left-tab-land;
+    }
+
+    @include respond(tab-port) {
+      left: $header-text-box-left-tab-port;
+    }
   }
 }

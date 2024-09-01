@@ -5,9 +5,13 @@
     $color-primary-dark 60%,
     rgb($color-primary-light, 1)
   );
-  padding-top: 20rem;
-  padding-bottom: 20rem;
-  margin-top: -15rem;
+  padding-top: 27rem;
+  padding-bottom: 25rem;
+  margin-top: -20rem;
+
+  @include respond(tab-port) {
+    margin-top: -17rem;
+  }
 }
 
 .offers-section {
@@ -23,10 +27,15 @@
   background-position: center;
   position: relative;
   transform: skewY(-6deg);
-  margin-top: -10rem;
+  margin-top: -15rem;
 
   & > * {
     transform: skewY(6deg);
+  }
+
+  @include respond(tab-port) {
+    margin-top: -15rem;
+    padding: 10rem 0;
   }
 }
 
@@ -40,9 +49,19 @@
     ),
     linear-gradient(40deg, rgb($color-primary-dark, 0.9) 75%, rgb($color-primary-dark, 0.98));
 
-  padding-top: 20rem;
+  padding-top: 25rem;
   padding-bottom: 30rem;
   margin-top: -10rem;
+
+  @include respond(tab-port) {
+    margin-top: -15rem;
+    padding-bottom: 25rem;
+  }
+
+  @include respond(big-desktop) {
+    margin-top: -15rem;
+    padding-top: 30rem;
+  }
 }
 
 .contact-section {
@@ -55,5 +74,15 @@
 
   & > * {
     transform: skewY(6deg);
+  }
+
+  @include respond(tab-port) {
+    margin-top: -15rem;
+    padding-top: 10rem;
+    padding-bottom: 20rem;
+  }
+
+  @include respond(big-desktop) {
+    padding-bottom: 25rem;
   }
 }

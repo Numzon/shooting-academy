@@ -9,6 +9,12 @@
   @include positionCenter;
 }
 
+@mixin absoluteHorizontalCenter {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 @mixin headerTextAnimation($animation-name) {
   animation-name: $animation-name;
   animation-duration: 0.5s;
@@ -20,5 +26,46 @@
     content: '';
     display: table;
     clear: both;
+  }
+}
+
+//MEDIA QUERY MANAGER
+/*
+0px - 600px Phone
+600px - 900px Tablet portrait
+900px - 1200px Tablet landscape
+1200 - 1800px Desktop (default for this project)
+1800px+ Big desktop 
+*/
+
+//ORDER: Base + typhography > general layout + grid > page layout > components
+
+@mixin respond($device) {
+  @if $device == phone {
+    //600px
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if $device == tab-port {
+    //900px
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $device == tab-land {
+    //1200px
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $device == big-desktop {
+    //1800px
+    @media (min-width: 112.5em) {
+      @content;
+    }
   }
 }
