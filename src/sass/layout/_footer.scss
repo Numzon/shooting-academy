@@ -4,7 +4,6 @@
   padding-right: 10rem;
   padding-top: 20rem;
   padding-bottom: 15rem;
-  clip-path: $footer-clip-path;
   background-image: $footer-background-image;
 
   @include respond(tab-port) {
@@ -12,11 +11,27 @@
     padding-top: 15rem;
     padding-bottom: 10rem;
     clip-path: $footer-clip-path-tab-port;
+
+    @supports (clip-path: $footer-clip-path-tab-port) or
+      (-webkit-clip-path: $footer-clip-path-tab-port) {
+      clip-path: $footer-clip-path-tab-port;
+      -webkit-clip-path: $footer-clip-path-tab-port;
+    }
   }
 
   @include respond(big-desktop) {
-    clip-path: $footer-clip-path-big-desktop;
     margin-top: -15rem;
+
+    @supports (clip-path: $footer-clip-path-big-desktop) or
+      (-webkit-clip-path: $footer-clip-path-big-desktop) {
+      clip-path: $footer-clip-path-big-desktop;
+      -webkit-clip-path: $footer-clip-path-big-desktop;
+    }
+  }
+
+  @supports (clip-path: $footer-clip-path) or (-webkit-clip-path: $footer-clip-path) {
+    clip-path: $footer-clip-path;
+    -webkit-clip-path: $footer-clip-path;
   }
 
   &__logo {

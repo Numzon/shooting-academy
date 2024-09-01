@@ -211,7 +211,7 @@ $textbox-label-left: 1.5rem;
 $textbox-label-transition: all 0.2s ease-in;
 
 $textbox-input-background-color: rgba($color-white, 0.9);
-$textbox-input-width: 80%;
+$textbox-input-width: 100%;
 $textbox-input-font-size: 1.8rem;
 $textbox-input-padding: 1rem 1.5rem;
 $textbox-input-border-radius: 1rem;
@@ -225,7 +225,7 @@ $radio-box-width: 50%;
 $radio-label-font-size: 1.8rem;
 $radio-label-padding-left: 3rem;
 
-$radio-button-outline-size: 1.8rem;
+$radio-button-outline-size: 2.3rem;
 $radio-button-outline-border: solid 3px $color-tertiary-light;
 $radio-button-inner-square-size: 1.5rem;
 $radio-button-circle-border-radius: 2rem;
@@ -248,3 +248,14 @@ $footer-list-items-transition: all 0.2s;
 $footer-list-item-margin-right: 1rem;
 $footer-list-item-box-shadow-hover: 0 0.5rem 1rem rgba($color-black, 0.2);
 $footer-list-item-trasnform-hover: scale(1.03) rotate(3deg);
+
+//POPUP
+$popup-backdrop-filter-blur: blur(3px);
+$popup-card-background-shadow: 0 1rem 1.5rem rgba($color-black, 0.3);
+$popup-card-height: 70vh;
+$popup-card-details-padding: 4rem;
+$popup-card-details-main-font-size: 1.8rem;
+$popup-card-details-sub-font-size: 1.4rem;
+$popup-close-size: 2.5rem;
+$popup-close-top: 1rem;
+$popup-close-right: 1.5rem;

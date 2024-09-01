@@ -6,13 +6,18 @@
   z-index: 2000;
   background-color: rgba($color-grey-light, 0.3);
 
-  backdrop-filter: blur(3px);
   height: 100vh;
   width: 100%;
   transition: all 0.2s;
 
   opacity: 0;
   visibility: hidden;
+
+  @supports (backdrop-filter: $popup-backdrop-filter-blur) or
+    (-webkit-backdrop-filter: $popup-backdrop-filter-blur) {
+    backdrop-filter: $popup-backdrop-filter-blur;
+    -webkit-backdrop-filter: $popup-backdrop-filter-blur;
+  }
 
   &--visible {
     opacity: 1;
@@ -21,11 +26,11 @@
 
   &__card {
     overflow: hidden;
-    height: 70vh;
+    height: $popup-card-height;
     width: $grid-width;
     background-color: $color-secondary-light;
     border-radius: 10px;
-    box-shadow: 0 1rem 1.5rem rgba($color-black, 0.3);
+    box-shadow: $popup-card-background-shadow;
     transition: all 0.3s;
 
     @include absoluteCenter;
@@ -50,7 +55,7 @@
 
   &__image {
     float: left;
-    width: calc(50%);
+    width: 50%;
     background-image: url('../img/popup-image-medium.jpg');
     background-size: cover;
     background-position: center;
@@ -63,13 +68,13 @@
 
   &__details {
     float: left;
-    width: calc(50% - 8rem);
-    padding: 4rem;
+    width: 50%;
+    padding: $popup-card-details-padding;
 
     text-align: justify;
 
     @include respond(tab-port) {
-      width: calc(100% - 8rem);
+      width: 100%;
 
       .btn {
         margin-top: auto;
@@ -77,20 +82,20 @@
     }
 
     &--main {
-      font-size: 1.8rem;
+      font-size: $popup-card-details-main-font-size;
       font-weight: 400;
     }
 
     &--sub {
-      font-size: 1.4rem;
+      font-size: $popup-card-details-sub-font-size;
     }
   }
 
   &__close {
     position: absolute;
-    right: 1.5rem;
-    top: 1rem;
-    font-size: 2.5rem;
+    right: $popup-close-right;
+    top: $popup-close-top;
+    font-size: $popup-close-size;
     font-weight: 700;
     color: $color-tertiary-dark;
     cursor: pointer;

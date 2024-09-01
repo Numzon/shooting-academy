@@ -26,7 +26,6 @@
   }
 
   &__form {
-    box-sizing: border-box;
     padding: $contact-form-padding;
     width: $contact-form-width;
 
@@ -49,14 +48,14 @@
 
       transform: translateX(-50%);
 
+      &:hover {
+        transform: translateY(-3px) translateX(-50%);
+      }
+
       @include respond(tab-port) {
         bottom: $contact-button-bottom-form-tab-port;
 
         @include absoluteHorizontalCenter;
-
-        &:hover {
-          transform: translateY(-3px) translateX(-50%);
-        }
       }
     }
   }
