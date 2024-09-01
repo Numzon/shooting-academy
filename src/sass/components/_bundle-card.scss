@@ -87,7 +87,7 @@
           rgb($color-tertiary-light, 0.2),
           rgb($color-tertiary-dark, 0.8)
         ),
-        url('../img/bundle-card-medium-1.jpg');
+        url('../img/bundle-card-small-1.jpg');
     }
 
     &--secondary {
@@ -96,7 +96,7 @@
           rgb($color-secondary-light, 0.2),
           rgb($color-secondary-dark, 0.8)
         ),
-        url('../img/bundle-card-medium-2.jpg');
+        url('../img/bundle-card-small-2.jpg');
     }
 
     &--primary {
@@ -105,7 +105,7 @@
           rgb($color-primary-light, 0.2),
           rgb($color-primary-light, 0.9)
         ),
-        url('../img/bundle-card-medium-3.jpg');
+        url('../img/bundle-card-small-3.jpg');
     }
   }
 

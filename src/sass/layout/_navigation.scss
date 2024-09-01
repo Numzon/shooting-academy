@@ -13,6 +13,16 @@
     background-color: $color-white;
     z-index: 2000;
     cursor: pointer;
+
+    @include respond(tab-land) {
+      top: $navigation-button-top-tab-land;
+      right: $navigation-button-right-tab-land;
+    }
+
+    @include respond(tab-port) {
+      top: $navigation-button-top-tab-port;
+      right: $navigation-button-right-tab-port;
+    }
   }
 
   &__icon {
@@ -77,6 +87,16 @@
     right: $navigation-button-right;
     z-index: 1500;
     transition: 0.4s all;
+
+    @include respond(tab-land) {
+      top: $navigation-button-top-tab-land;
+      right: $navigation-button-right-tab-land;
+    }
+
+    @include respond(tab-port) {
+      top: $navigation-button-top-tab-port;
+      right: $navigation-button-right-tab-port;
+    }
   }
 
   &__list {
@@ -96,7 +116,11 @@
 
     z-index: 1500;
     transition: 0.4s all;
-    user-select: none;
+
+    @supports (user-select: none) or (-webkit-user-select: none) {
+      user-select: none;
+      -webkit-user-select: none;
+    }
   }
 
   &__checkbox:checked ~ &__background {

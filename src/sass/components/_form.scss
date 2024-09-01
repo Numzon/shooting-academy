@@ -38,6 +38,10 @@
     &:focus:invalid {
       border-color: $color-invalid;
     }
+
+    @include respond(tab-port) {
+      box-sizing: border-box;
+    }
   }
 
   &__input:placeholder-shown + &__label {

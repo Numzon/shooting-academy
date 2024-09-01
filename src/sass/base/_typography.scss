@@ -10,6 +10,14 @@
   letter-spacing: $heading-primary-letter-spacing;
   margin: 0;
 
+  @include respond(tab-port) {
+    letter-spacing: $heading-primary-letter-spacing-small;
+  }
+
+  @include respond(phone) {
+    font-size: $heading-primary-font-size-small;
+  }
+
   &:hover {
     transform: rotate(-4deg) scale(1.05);
   }
@@ -20,9 +28,12 @@
   text-transform: uppercase;
   font-weight: $heading-secondary-font-weight;
   font-size: $heading-secondary-font-size;
+  text-shadow: $heading-secondary-text-shadow;
   margin: 0;
 
-  text-shadow: $heading-secondary-text-shadow;
+  @include respond(phone) {
+    font-size: $heading-secondary-font-size-small;
+  }
 }
 
 .paragraph {
@@ -31,12 +42,28 @@
   font-weight: $paragraph-font-weight;
   letter-spacing: $paragraph-letter-spacing;
   margin: 0;
+
+  @include respond(tab-port) {
+    letter-spacing: $paragraph-letter-spacing-small;
+  }
+
+  @include respond(phone) {
+    font-size: $paragraph-font-size-small;
+  }
 }
 
 .heading-tertiary {
   color: $color-black;
-  font-size: 1.9rem;
-  letter-spacing: 1.7px;
+  font-size: $heading-tertiaty-font-size;
+  letter-spacing: $heading-tertiary-letter-spacing;
   text-align: center;
   margin: 0;
+
+  @include respond(tab-port) {
+    letter-spacing: $heading-tertiary-letter-spacing-small;
+  }
+
+  @include respond(phone) {
+    font-size: $heading-tertiaty-font-size-small;
+  }
 }

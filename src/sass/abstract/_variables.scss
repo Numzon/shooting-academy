@@ -22,22 +22,72 @@ $default-font-size: 1.8rem;
 
 //TYPHOGRAPHY
 $heading-primary-font-size: 3rem;
+$heading-primary-font-size-small: 2.8rem;
 $heading-primary-font-weight: 700;
+$heading-primary-letter-spacing: 0.2rem;
+$heading-primary-letter-spacing-small: 0.1rem;
+
 $heading-secondary-font-size: 2.1rem;
+$heading-secondary-font-size-small: 1.9rem;
 $heading-secondary-font-weight: 700;
 $heading-secondary-text-shadow: 2px 2px $color-black;
-$heading-primary-letter-spacing: 0.2rem;
+
+$heading-tertiaty-font-size: 1.9rem;
+$heading-tertiaty-font-size-small: 1.7rem;
+$heading-tertiary-letter-spacing: 0.17rem;
+$heading-tertiary-letter-spacing-small: 0.1rem;
+
 $paragraph-font-size: 1.6rem;
+$paragraph-font-size-small: 1.4rem;
 $paragraph-font-weight: 400;
 $paragraph-letter-spacing: 0.2rem;
+$paragraph-letter-spacing-small: 0.1rem;
 
 //HEADER
-$header-polygon: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+$header-background-image-linear-gradiend: linear-gradient(
+  45deg,
+  rgb($color-primary-dark, 0.85) 40%,
+  rgb($color-primary-light, 0.9),
+  rgb($color-primary-light, 0.8)
+);
+
+$header-height-not-supports-clip-path: 85vh;
+$header-height: 95vh;
+$header-height-tab-port: 90vh;
+$header-height-phone: 85vh;
+
+$header-polygon: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+$header-polygon-tab-port: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+$header-polygon-phone: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+$header-logo-width: 12rem;
+$header-logo-box-left: 2rem;
+$header-logo-box-top: 2rem;
+$header-logo-box-left-tab-land: 2.5rem;
+$header-logo-box-top-tab-land: 2.5rem;
+$header-logo-box-left-tab-port: 2.5rem;
+$header-logo-box-top-tab-port: 2.5rem;
+
+$header-text-box-top: 45%;
+$header-text-box-left: 25%;
+$header-text-box-left-tab-land: 30%;
+$header-text-box-left-tab-port: 35%;
+$header-button-box-top: 60%;
+$header-text-main-font-size: 6rem;
+$header-text-main-font-size-tab-port: 5.5rem;
+$header-text-main-font-size-phone: 5rem;
+$header-text-sub-font-size: 2rem;
+$header-text-sub-font-size-tab-port: 1.8rem;
+$header-text-sub-font-size-phone: 1.7rem;
+$header-text-main-letter-spacing: 1rem;
+$header-text-main-letter-spacing-tab-port: 0.7rem;
+$header-text-main-letter-spacing-phone: 0.4rem;
+$header-text-sub-letter-spacing: 0.3rem;
+$header-text-sub-letter-spacing-tab-port: 0.15rem;
+$header-text-sub-letter-spacing-phone: 0.1rem;
+$header-text-shadow: 0.3rem 0.3rem $color-black;
 $header-main-text-shadow: 0.5rem 0.5rem 0.5rem $color-black;
 $header-sub-text-shadow: 0.25rem 0.25rem 0.25rem $color-black;
-$header-logo-width: 12rem;
-$header-text-main-font-size: 6rem;
-$header-text-sub-font-size: 2rem;
 
 //BUTTON
 $button-box-shadow: 0 0.75rem 1.25rem rgba($color-black, 0.4);
@@ -48,7 +98,11 @@ $button-border-radius: 15px;
 $navigation-button-size: 7rem;
 $navigation-button-border-radius: 100rem;
 $navigation-button-top: 4%;
+$navigation-button-top-tab-land: 5%;
+$navigation-button-top-tab-port: 6%;
 $navigation-button-right: 2%;
+$navigation-button-right-tab-land: 3%;
+$navigation-button-right-tab-port: 4%;
 $navigation-link-background-image: linear-gradient(
   120deg,
   transparent 0%,
@@ -60,9 +114,13 @@ $navigation-link-font-size: 3rem;
 
 //GRID
 $grid-width: 114rem;
+$grid-width-tab-port: 65rem;
+$grid-width-phone: 55em;
 $gutter-vertical: 8rem;
+$gutter-vertical-tab-port: 6rem;
 $gutter-horizontal: 6rem;
 $max-number-of-grid-columns: 12;
+$column-width-tab-port: 100% !important;
 
 //COMPOSITION
 $composition-border-radius: 2rem;
@@ -72,6 +130,12 @@ $composition-box-shadow: 0 1rem 1.5rem rgba($color-black, 0.3);
 $composition-box-shadow-hover: 0 1rem 1.5rem rgba($color-black, 0.3);
 
 //OFFER CARD
+$offer-background-image-linear-gradient: linear-gradient(
+  45deg,
+  rgb($color-primary-dark, 1) 25%,
+  rgb($color-primary-dark, 0.8) 50%,
+  rgb($color-tertiary-light, 0.5)
+);
 $offer-card-padding: 3rem;
 $offer-card-background-color: rgba($color-white, 0.7);
 $offer-card-border-radius: 2rem;
@@ -115,12 +179,26 @@ $bundle-card-cta-dates-li-padding: 1rem;
 $bundle-card-cta-dates-li-border-bottom: 1px $color-grey-light solid;
 
 //CONTACT FORM
-
+$contact-background-image-linear-gradient: linear-gradient(
+  100deg,
+  rgb($color-primary-dark, 0.95) 50%,
+  transparent 50%
+);
+$contact-background-image-linear-gradient-tab-port: linear-gradient(
+  100deg,
+  rgb($color-primary-dark, 0.95),
+  rgb($color-primary-dark, 0.75)
+);
 $contact-height: 51rem;
+$contact-height-tab-port: 45rem;
+$contact-height-phone: 48rem;
 $contact-border-radius: 15px;
 $contact-form-padding: 6rem;
-$contact-form-width: 43%;
+$contact-form-padding-tab-port: 4rem;
+$contact-form-width: 50%;
 $contact-button-left: 25%;
+$contact-margin-top-form-tab-port: 5rem;
+$contact-button-bottom-form-tab-port: 5rem;
 
 //FORM
 $form-group-margin-bottom: 3rem;
@@ -133,7 +211,7 @@ $textbox-label-left: 1.5rem;
 $textbox-label-transition: all 0.2s ease-in;
 
 $textbox-input-background-color: rgba($color-white, 0.9);
-$textbox-input-width: 80%;
+$textbox-input-width: 100%;
 $textbox-input-font-size: 1.8rem;
 $textbox-input-padding: 1rem 1.5rem;
 $textbox-input-border-radius: 1rem;
@@ -147,7 +225,7 @@ $radio-box-width: 50%;
 $radio-label-font-size: 1.8rem;
 $radio-label-padding-left: 3rem;
 
-$radio-button-outline-size: 1.8rem;
+$radio-button-outline-size: 2.3rem;
 $radio-button-outline-border: solid 3px $color-tertiary-light;
 $radio-button-inner-square-size: 1.5rem;
 $radio-button-circle-border-radius: 2rem;
@@ -162,9 +240,22 @@ $footer-border-top: 1px solid $color-grey-light;
 $footer-font-weight: 400;
 $footer-element-padding: 0.25rem 0.5rem;
 $footer-background-image: linear-gradient(45deg, $color-tertiary-dark 45%, $color-tertiary-light);
-$footer-clip-path: polygon(0 24vh, 100% 0, 100% 100%, 0 100%);
+$footer-clip-path: polygon(0 10vh, 100% 0, 100% 100%, 0 100%);
+$footer-clip-path-tab-port: polygon(0 10vh, 100% 0, 100% 100%, 0 100%);
+$footer-clip-path-big-desktop: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
 
 $footer-list-items-transition: all 0.2s;
 $footer-list-item-margin-right: 1rem;
 $footer-list-item-box-shadow-hover: 0 0.5rem 1rem rgba($color-black, 0.2);
 $footer-list-item-trasnform-hover: scale(1.03) rotate(3deg);
+
+//POPUP
+$popup-backdrop-filter-blur: blur(3px);
+$popup-card-background-shadow: 0 1rem 1.5rem rgba($color-black, 0.3);
+$popup-card-height: 70vh;
+$popup-card-details-padding: 4rem;
+$popup-card-details-main-font-size: 1.8rem;
+$popup-card-details-sub-font-size: 1.4rem;
+$popup-close-size: 2.5rem;
+$popup-close-top: 1rem;
+$popup-close-right: 1.5rem;

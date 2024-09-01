@@ -1,6 +1,8 @@
 .composition {
   position: relative;
 
+  @include clearfix;
+
   &__image {
     position: absolute;
     width: $composition-image-width;
@@ -15,24 +17,49 @@
       transform: scale(1.1);
       box-shadow: $composition-box-shadow-hover;
     }
+
+    @include respond(tab-port) {
+      position: relative;
+      float: left;
+      width: 32.33333%;
+    }
+
+    @include respond(phone) {
+      width: 31.33333%;
+    }
   }
 
   &__image--first {
     top: 2rem;
     left: 12rem;
     z-index: 2;
+
+    @include respond(tab-port) {
+      top: -1rem;
+      left: 0rem;
+    }
   }
 
   &__image--second {
     top: 15rem;
-    left: 2rem;
+    left: 0rem;
     z-index: 3;
+
+    @include respond(tab-port) {
+      top: -3rem;
+      transform: scale(1.2);
+    }
   }
 
   &__image--third {
     top: 18rem;
     right: 0rem;
     z-index: 1;
+
+    @include respond(tab-port) {
+      top: -1rem;
+      right: 0rem;
+    }
   }
 
   &:hover &__image:not(:hover) {
