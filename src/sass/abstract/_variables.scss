@@ -44,6 +44,13 @@ $paragraph-letter-spacing: 0.2rem;
 $paragraph-letter-spacing-small: 0.1rem;
 
 //HEADER
+$header-background-image-linear-gradiend: linear-gradient(
+  45deg,
+  rgb($color-primary-dark, 0.85) 40%,
+  rgb($color-primary-light, 0.9),
+  rgb($color-primary-light, 0.8)
+);
+
 $header-height-not-supports-clip-path: 85vh;
 $header-height: 95vh;
 $header-height-tab-port: 90vh;
@@ -123,6 +130,12 @@ $composition-box-shadow: 0 1rem 1.5rem rgba($color-black, 0.3);
 $composition-box-shadow-hover: 0 1rem 1.5rem rgba($color-black, 0.3);
 
 //OFFER CARD
+$offer-background-image-linear-gradient: linear-gradient(
+  45deg,
+  rgb($color-primary-dark, 1) 25%,
+  rgb($color-primary-dark, 0.8) 50%,
+  rgb($color-tertiary-light, 0.5)
+);
 $offer-card-padding: 3rem;
 $offer-card-background-color: rgba($color-white, 0.7);
 $offer-card-border-radius: 2rem;
@@ -182,7 +195,7 @@ $contact-height-phone: 48rem;
 $contact-border-radius: 15px;
 $contact-form-padding: 6rem;
 $contact-form-padding-tab-port: 4rem;
-$contact-form-width: 43%;
+$contact-form-width: 50%;
 $contact-button-left: 25%;
 $contact-margin-top-form-tab-port: 5rem;
 $contact-button-bottom-form-tab-port: 5rem;

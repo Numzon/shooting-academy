@@ -1,16 +1,15 @@
 .header {
-  background-image: linear-gradient(
-      45deg,
-      rgb($color-primary-dark, 0.85) 40%,
-      rgb($color-primary-light, 0.9),
-      rgb($color-primary-light, 0.8)
-    ),
-    url('../img/header-background.jpg');
+  background-image: $header-background-image-linear-gradiend, url('../img/header-background.jpg');
 
   height: $header-height-not-supports-clip-path;
   background-size: cover;
   background-position: center;
   position: relative;
+
+  @include respond(phone) {
+    background-image: $header-background-image-linear-gradiend,
+      url('../img/header-background-small.jpg');
+  }
 
   @supports (-webkit-clip-path: $header-polygon) or (clip-path: $header-polygon) {
     -webkit-clip-path: $header-polygon;

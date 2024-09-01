@@ -1,6 +1,6 @@
 .contact {
   background-image: $contact-background-image-linear-gradient,
-    url(../../src/img/contact-background-large.jpg);
+    url(../../src/img/contact-background-medium.jpg);
   background-position: center;
   background-size: cover;
   height: $contact-height;
@@ -10,12 +10,19 @@
 
   @include respond(tab-port) {
     background-image: $contact-background-image-linear-gradient-tab-port,
-      url(../../src/img/contact-background-large.jpg);
+      url(../../src/img/contact-background-medium.jpg);
     height: $contact-height-tab-port;
   }
 
   @include respond(phone) {
+    background-image: $contact-background-image-linear-gradient-tab-port,
+      url(../../src/img/contact-background-small.jpg);
     height: $contact-height-phone;
+  }
+
+  @include respond(big-desktop) {
+    background-image: $contact-background-image-linear-gradient-tab-port,
+      url(../../src/img/contact-background-large.jpg);
   }
 
   &__form {
@@ -40,9 +47,16 @@
       position: absolute;
       left: $contact-button-left;
 
+      transform: translateX(-50%);
+
       @include respond(tab-port) {
         bottom: $contact-button-bottom-form-tab-port;
+
         @include absoluteHorizontalCenter;
+
+        &:hover {
+          transform: translateY(-3px) translateX(-50%);
+        }
       }
     }
   }

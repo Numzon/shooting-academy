@@ -30,6 +30,14 @@
 
     @include absoluteCenter;
     transform: scale(0.9) translate(-55%, -55%);
+
+    @include respond(tab-port) {
+      width: $grid-width-tab-port;
+    }
+
+    @include respond(tab-port) {
+      width: $grid-width-phone;
+    }
   }
 
   &--visible &__card {
@@ -43,10 +51,14 @@
   &__image {
     float: left;
     width: calc(50%);
-    background-image: url('../img/popup-image-large.jpg');
+    background-image: url('../img/popup-image-medium.jpg');
     background-size: cover;
     background-position: center;
     height: 100%;
+
+    @include respond(tab-port) {
+      display: none;
+    }
   }
 
   &__details {
@@ -55,6 +67,14 @@
     padding: 4rem;
 
     text-align: justify;
+
+    @include respond(tab-port) {
+      width: calc(100% - 8rem);
+
+      .btn {
+        margin-top: auto;
+      }
+    }
 
     &--main {
       font-size: 1.8rem;
