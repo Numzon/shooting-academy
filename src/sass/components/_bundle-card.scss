@@ -61,7 +61,7 @@
     }
   }
 
-  @media only screen and (min-width: $tab-land-max-width), only screen and (hover: hover) {
+  @include respondHoverDevice {
     height: $bundle-card-height;
 
     &__side {
@@ -239,7 +239,7 @@
     }
   }
 
-  @media only screen and (min-width: $tab-land-max-width), only screen and (hover: hover) {
+  @include respondHoverDevice {
     &__price-text {
       font-size: $bundle-card-cta-price-text-font-size;
       margin-top: $bundle-card-cta-price-text-margin-top;

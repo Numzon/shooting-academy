@@ -67,3 +67,9 @@
     }
   }
 }
+
+@mixin respondHoverDevice {
+  @media only screen and (min-width: $tab-land-max-width), only screen and (hover: hover) {
+    @content;
+  }
+}
