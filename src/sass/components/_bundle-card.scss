@@ -1,7 +1,7 @@
 .bundle-card {
   //FUNCTIONALITY
   position: relative;
-  height: $bundle-card-height;
+  height: calc($bundle-card-height * $bundle-card-height-multiplier);
 
   @supports (perspective: $bundle-card-perspective) or (-moz-perspective: $bundle-card-perspective) {
     perspective: $bundle-card-perspective;
@@ -10,24 +10,24 @@
 
   &__side {
     box-shadow: $bundle-card-box-shadow;
-    border-radius: $bundle-card-border-radius;
+
     position: absolute;
-    height: $bundle-card-height;
     width: 100%;
     overflow: hidden;
     transition: 0.8s all ease;
 
-    @supports (backface-visibility: hidden) or (-webkit-backface-visibility: hidden) {
-      backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
-    }
-
     &--front {
+      border-top-left-radius: $bundle-card-border-radius;
+      border-top-right-radius: $bundle-card-border-radius;
+      height: $bundle-card-height;
       background-color: rgb($color-white, 0.85);
     }
 
     &--back {
-      transform: rotateY(180deg);
+      height: calc(($bundle-card-height * $bundle-card-height-multiplier) - $bundle-card-height);
+      bottom: 0;
+      border-bottom-left-radius: $bundle-card-border-radius;
+      border-bottom-right-radius: $bundle-card-border-radius;
 
       &-primary {
         background-image: linear-gradient(
@@ -61,12 +61,36 @@
     }
   }
 
-  &:hover &__side--front {
-    transform: rotateY(-180deg);
-  }
+  @include respondHoverDevice {
+    height: $bundle-card-height;
 
-  &:hover &__side--back {
-    transform: rotateY(0);
+    &__side {
+      border-radius: $bundle-card-border-radius;
+
+      @supports (backface-visibility: hidden) or (-webkit-backface-visibility: hidden) {
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+      }
+
+      &--back {
+        height: $bundle-card-height;
+        transform: rotateY(180deg);
+        bottom: 0;
+      }
+    }
+
+    &:hover &__side--front {
+      transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back {
+      transform: rotateY(0);
+    }
+
+    @supports (backface-visibility: hidden) or (-webkit-backface-visibility: hidden) {
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
   }
 
   //FRONT CARD
@@ -177,6 +201,7 @@
   }
 
   //BACK CARD
+
   &__cta {
     text-align: center;
   }
@@ -186,17 +211,18 @@
   }
 
   &__price-text {
-    font-size: $bundle-card-cta-price-text-font-size;
+    font-size: $bundle-card-cta-price-text-font-size-no-hover;
+    margin-top: $bundle-card-cta-price-text-margin-top-no-hover;
   }
 
   &__price {
-    font-size: $bundle-card-cta-price-font-size;
-    font-weight: $bundle-card-cta-price-font-weight;
+    font-size: $bundle-card-cta-price-font-size-no-hover;
+    margin: $bundle-card-cta-price-margin-no-hover;
   }
 
   &__dates {
     margin: 0 auto;
-    font-size: $bundle-card-cta-dates-font-size;
+    font-size: $bundle-card-cta-dates-font-size-no-hover;
     ul {
       padding: 0;
       list-style: none;
@@ -208,6 +234,28 @@
 
         &:not(:last-child) {
           border-bottom: $bundle-card-cta-dates-li-border-bottom;
+        }
+      }
+    }
+  }
+
+  @include respondHoverDevice {
+    &__price-text {
+      font-size: $bundle-card-cta-price-text-font-size;
+      margin-top: $bundle-card-cta-price-text-margin-top;
+    }
+
+    &__price {
+      margin: $bundle-card-cta-price-margin;
+      font-size: $bundle-card-cta-price-font-size;
+    }
+
+    &__dates {
+      font-size: $bundle-card-cta-dates-font-size;
+
+      ul {
+        li {
+          padding: $bundle-card-cta-dates-li-padding;
         }
       }
     }

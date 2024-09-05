@@ -38,34 +38,38 @@
 1800px+ Big desktop 
 */
 
-//ORDER: Base + typhography > general layout + grid > page layout > components
-
 @mixin respond($device) {
   @if $device == phone {
     //600px
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: $phone-max-width) {
       @content;
     }
   }
 
   @if $device == tab-port {
     //900px
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: $tab-port-max-width) {
       @content;
     }
   }
 
   @if $device == tab-land {
     //1200px
-    @media (max-width: 75em) {
+    @media only screen and (max-width: $tab-land-max-width) {
       @content;
     }
   }
 
   @if $device == big-desktop {
     //1800px
-    @media (min-width: 112.5em) {
+    @media only screen and (min-width: $big-desktop-min-width) {
       @content;
     }
+  }
+}
+
+@mixin respondHoverDevice {
+  @media only screen and (min-width: $tab-land-max-width), only screen and (hover: hover) {
+    @content;
   }
 }
