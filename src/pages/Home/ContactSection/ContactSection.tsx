@@ -1,10 +1,46 @@
 import HeadingPrimary from '../../../components/HeadingPrimary';
-import TextField from '../../../components/TextField';
-import Button from '../../../components/Button';
-import { RadioButton, RadioGroup } from '../../../components/RadioGroup';
 import { Column, Row } from '../../../components/Grid';
+import ContactForm from './ContactForm';
+import { FormProvider, SubmitHandler, useForm } from 'react-hook-form';
+import { ContactFormValues, contactValidationSchema } from './ContactForm/validation';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useCreateSubscriber } from '../../../api/hooks/Subscriber';
+import { Toaster, toast } from 'sonner';
 
 export const ContactSection = () => {
+  const formMethods = useForm<ContactFormValues>({
+    resolver: zodResolver(contactValidationSchema),
+    defaultValues: {
+      email: '',
+      fullname: '',
+      isRadioTrue: '',
+    },
+  });
+  const { handleSubmit } = formMethods;
+  const { mutateAsync, isSuccess } = useCreateSubscriber();
+
+  const onSubmit: SubmitHandler<ContactFormValues> = async (values) => {
+    try {
+      await mutateAsync(
+        {
+          email: values.email,
+          fullname: values.fullname,
+          isRadioTrue: values.isRadioTrue === 'true',
+        },
+        {
+          onSuccess: () => {
+            toast.success('Operation successful!');
+          },
+          onError: () => {
+            toast.error('Some error has occured, try later');
+          },
+        },
+      );
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <div className="contact-section">
       <Row>
@@ -14,29 +50,20 @@ export const ContactSection = () => {
               <div className="u-margin-bottom-medium">
                 <HeadingPrimary>Lorem ipsum, dolor sit amet.</HeadingPrimary>
               </div>
-              <form action="#" className="form">
-                <TextField id="full_name" type="text" placeholder="Full name" required>
-                  Full name
-                </TextField>
-                <TextField id="email_address" type="email" placeholder="Email address" required>
-                  Email address
-                </TextField>
-                <RadioGroup>
-                  <RadioButton id="first" name="test">
-                    Lorem impsum
-                  </RadioButton>
-                  <RadioButton id="second" name="test">
-                    Ipsume lorems ses
-                  </RadioButton>
-                </RadioGroup>
-                <div className="u-margin-top-huge contact__button">
-                  <Button type="tertiary">Send now!</Button>
-                </div>
-              </form>
+              <FormProvider {...formMethods}>
+                <form
+                  className="form"
+                  onSubmit={handleSubmit(onSubmit)}
+                  aria-labelledby="form-label-element-id"
+                >
+                  <ContactForm isSuccess={isSuccess} />
+                </form>
+              </FormProvider>
             </div>
           </div>
         </Column>
       </Row>
+      <Toaster richColors />
     </div>
   );
 };

@@ -80,4 +80,12 @@
       background-color: $color-tertiary-light;
     }
   }
+
+  &:disabled {
+    background-color: $color-grey-light-2;
+
+    &::after {
+      background-color: $color-grey-light-2;
+    }
+  }
 }

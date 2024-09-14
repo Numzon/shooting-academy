@@ -27,7 +27,7 @@ export const BundlesSection = () => {
               <li>Lorem ipsum dolor sit amet</li>
               <li>Dolor sit</li>
             </BundleCardSideFront>
-            <BundleCardSideBack buttonType="secondary" price="234$" color="tertiary">
+            <BundleCardSideBack buttonVariant="secondary" price="234$" color="tertiary">
               <li>07/11/2024 - 14/11/2024</li>
               <li>12/02/2025 - 19/02/2025</li>
               <li>14/03/2025 - 21/03/2025</li>
@@ -46,7 +46,7 @@ export const BundlesSection = () => {
               <li>Lorem sit ipsum sit</li>
               <li>Lorem ipsum dolor sit amet</li>
             </BundleCardSideFront>
-            <BundleCardSideBack buttonType="primary" price="224$" color="secondary">
+            <BundleCardSideBack buttonVariant="primary" price="224$" color="secondary">
               <li>09/12/2024 - 14/11/2024</li>
               <li>12/02/2025 - 19/02/2025</li>
               <li>19/04/2025 - 28/04/2025</li>
@@ -66,7 +66,7 @@ export const BundlesSection = () => {
               <li>Lorem ipsum dolor sit amet</li>
               <li>Dolor sit lorem</li>
             </BundleCardSideFront>
-            <BundleCardSideBack buttonType="tertiary" price="124$" color="primary">
+            <BundleCardSideBack buttonVariant="tertiary" price="124$" color="primary">
               <li>07/11/2024 - 14/11/2024</li>
               <li>12/02/2025 - 19/02/2025</li>
             </BundleCardSideBack>

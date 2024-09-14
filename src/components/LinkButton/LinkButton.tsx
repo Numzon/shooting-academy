@@ -2,20 +2,26 @@ import { ComponentPropsWithoutRef } from 'react';
 import { getButtonClassName } from '../../utlis/button';
 import { ButtonVariant } from '../../types/button';
 
-type ButtonProps = {
+type LinkButtonProps = {
   children?: React.ReactNode;
   variant: ButtonVariant;
   animated?: boolean;
-} & ComponentPropsWithoutRef<'button'>;
+} & ComponentPropsWithoutRef<'a'>;
 
-export const Button = ({ className, children, variant, animated, ...fieldProps }: ButtonProps) => {
+export const LinkButton = ({
+  className,
+  children,
+  variant,
+  animated,
+  ...fieldProps
+}: LinkButtonProps) => {
   const combinedClassName = getButtonClassName({ variant, animated, className });
 
   return (
-    <button className={combinedClassName} {...fieldProps}>
+    <a className={combinedClassName} {...fieldProps}>
       {children}
-    </button>
+    </a>
   );
 };
 
-export default Button;
+export default LinkButton;

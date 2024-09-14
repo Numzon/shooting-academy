@@ -1,4 +1,4 @@
-import Button from '../../../components/Button';
+import LinkButton from '../../../components/LinkButton';
 import Heading from './Heading';
 import Logo from './Logo';
 
@@ -9,12 +9,12 @@ export const Header = () => {
         <Logo />
         <Heading />
         <div className="header__button-box">
-          <Button href="#" type="secondary" className="u-margin-left-medium" animated>
+          <LinkButton href="#" variant="secondary" className="u-margin-left-medium" animated>
             Lorem
-          </Button>
-          <Button href="#" type="tertiary" className="u-margin-left-medium" animated>
+          </LinkButton>
+          <LinkButton href="#" variant="tertiary" className="u-margin-left-medium" animated>
             Lorem test
-          </Button>
+          </LinkButton>
         </div>
       </header>
     </>
