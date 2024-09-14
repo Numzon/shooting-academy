@@ -13,6 +13,7 @@ Currently used libraries:
 - React Query
 - Zod - form validation
 - PocketBase - api simulation
+- Sonner - provides toasts
 
 Tests:
 
@@ -44,10 +45,9 @@ There is a chance that number of points would be expanded.
 
 IMPORTANT:
 
-If you want to run this project - use laptop screen as it is not responsive yet
-Currently you don't have to deal with pocketbase app, just npm install and npm run dev
-
-TODO:
-
-1. Unit tests setup (many components that need testing already)
-2. Packages for clients section (cards with price on the background - card move to back when hovered)
+If you want to run this project, you need pocketbase:
+run pocketbase by:
+- ./pocketbase.exe serve
+run vs code and use this commands in terminal: 
+- npm install
+- npm run dev
