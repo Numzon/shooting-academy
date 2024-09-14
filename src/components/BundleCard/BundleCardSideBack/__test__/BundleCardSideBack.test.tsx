@@ -21,7 +21,7 @@ if (import.meta.vitest) {
   describe('BundleCardSideBack tests', () => {
     it('BundleCardSideBack renders', () => {
       render(
-        <BundleCardSideBack buttonType="primary" color="primary" price="324">
+        <BundleCardSideBack buttonVariant="primary" color="primary" price="324">
           <li>dummy text</li>
         </BundleCardSideBack>,
       );
@@ -32,7 +32,7 @@ if (import.meta.vitest) {
 
     it('BundleCardSideBack renders and clicked', () => {
       render(
-        <BundleCardSideBack buttonType="primary" color="primary" price="324">
+        <BundleCardSideBack buttonVariant="primary" color="primary" price="324">
           <li>dummy text</li>
         </BundleCardSideBack>,
       );

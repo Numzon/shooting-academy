@@ -8,7 +8,7 @@ if (import.meta.vitest) {
     it('Renders Button and sets dummy text as children', () => {
       const dummyText = 'dummyText';
 
-      render(<Button type="primary">{dummyText}</Button>);
+      render(<Button variant="primary">{dummyText}</Button>);
 
       expect(screen.getByText(dummyText)).toBeInTheDocument();
     });
@@ -16,7 +16,7 @@ if (import.meta.vitest) {
     it('Renders primary type Button that contains btn--primary class', () => {
       const dummyText = 'dummyText';
 
-      render(<Button type="primary">{dummyText}</Button>);
+      render(<Button variant="primary">{dummyText}</Button>);
 
       expect(screen.getByText(dummyText)).toHaveClass('btn--primary');
       expect(screen.getByText(dummyText)).not.toHaveClass('btn--secondary');
@@ -26,7 +26,7 @@ if (import.meta.vitest) {
     it('Renders secondary type Button that contains btn--secondary class', () => {
       const dummyText = 'dummyText';
 
-      render(<Button type="secondary">{dummyText}</Button>);
+      render(<Button variant="secondary">{dummyText}</Button>);
 
       expect(screen.getByText(dummyText)).toHaveClass('btn--secondary');
       expect(screen.getByText(dummyText)).not.toHaveClass('btn--primary');
@@ -36,7 +36,7 @@ if (import.meta.vitest) {
     it('Renders tertiary type Button that contains btn--tertiary class', () => {
       const dummyText = 'dummyText';
 
-      render(<Button type="tertiary">{dummyText}</Button>);
+      render(<Button variant="tertiary">{dummyText}</Button>);
 
       expect(screen.getByText(dummyText)).toHaveClass('btn--tertiary');
       expect(screen.getByText(dummyText)).not.toHaveClass('btn--secondary');
@@ -48,7 +48,7 @@ if (import.meta.vitest) {
       const additionalClass = 'additional-class';
 
       render(
-        <Button type="primary" className={additionalClass}>
+        <Button variant="primary" className={additionalClass}>
           {dummyText}
         </Button>,
       );
@@ -60,7 +60,7 @@ if (import.meta.vitest) {
       const dummyText = 'dummyText';
 
       render(
-        <Button type="tertiary" animated>
+        <Button variant="tertiary" animated>
           {dummyText}
         </Button>,
       );

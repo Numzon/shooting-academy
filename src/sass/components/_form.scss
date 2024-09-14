@@ -35,8 +35,12 @@
       border: $textbox-input-focus-valid;
     }
 
-    &:focus:invalid {
+    &--invalid {
       border-color: $color-invalid;
+
+      &:focus {
+        border-color: $color-invalid;
+      }
     }
 
     @include respond(tab-port) {
@@ -46,7 +50,71 @@
 
   &__input:placeholder-shown + &__label {
     visibility: hidden;
-    transform: translateY(0);
+    transform: translateY(-3rem);
+  }
+
+  &__helper-icon {
+    font-size: 1.2rem;
+    font-weight: 700;
+    position: absolute;
+    color: $color-black;
+    background-color: $color-invalid;
+    padding: 0.3rem;
+    border-radius: 5px;
+    right: -1rem;
+    top: -1rem;
+    border: 2px solid $color-primary-dark;
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.8);
+
+    transition: 0.3s all;
+
+    &--visible {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+    }
+  }
+
+  &__helper-box {
+    position: absolute;
+    background-color: $color-invalid;
+    font-size: $textbox-label-font-size;
+    border-radius: 5px;
+    padding: 1.25rem 1.75rem;
+    right: -10rem;
+    top: -3.2rem;
+    width: 22rem;
+    border: 2px solid $color-black;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.8);
+
+    transition: 0.3s all;
+
+    &--visible {
+      opacity: 1;
+      transform: scale(1);
+      visibility: visible;
+    }
+  }
+
+  &__helper-text {
+    font-weight: 700;
+    color: $color-black;
+  }
+
+  &__helper__close {
+    color: $color-black;
+    position: absolute;
+    font-size: 1.8rem;
+    right: 0.5rem;
+    top: 0rem;
+    cursor: pointer;
   }
 
   &__radio-box {
@@ -86,12 +154,14 @@
       transition: $radio-button-checked-change-transition;
     }
 
-    &::after:invalid {
-      background-color: $color-invalid;
-    }
+    &--invalid {
+      &::after {
+        background-color: $color-invalid;
+      }
 
-    &::before:invalid {
-      border: $radio-button-invalid-state-border;
+      &::before {
+        border: $radio-button-invalid-state-border;
+      }
     }
   }
 
@@ -101,5 +171,11 @@
 
   &__radio-input:checked + &__radio-label::after {
     opacity: 1;
+  }
+
+  &__success-message {
+    font-size: 1.6rem;
+    color: $color-white;
+    text-align: center;
   }
 }

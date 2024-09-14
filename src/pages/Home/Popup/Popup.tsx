@@ -1,4 +1,4 @@
-import Button from '../../../components/Button';
+import LinkButton from '../../../components/LinkButton';
 import HeadingTertiary from '../../../components/HeadingTertiary';
 import useHomePopup from '../../../contexts/HomePopupContext/hooks';
 
@@ -26,9 +26,9 @@ export const Popup = () => {
             animi!
           </div>
           <div className="u-text-align-center">
-            <Button type="tertiary" onClick={() => toggle()}>
+            <LinkButton variant="tertiary" type="link" onClick={() => toggle()}>
               Some button
-            </Button>
+            </LinkButton>
           </div>
         </div>
         <div className="popup__close" onClick={() => toggle()} data-testid="close-button">

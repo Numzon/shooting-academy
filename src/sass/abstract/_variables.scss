@@ -10,6 +10,7 @@ $color-tertiary-dark: #7f7a2e;
 
 $color-grey-dark: #262b15;
 $color-grey-light: #464b37;
+$color-grey-light-2: #c5c3c4;
 
 $color-white: #fff;
 $color-black: #000;
@@ -18,7 +19,7 @@ $color-invalid: orangered;
 $color-valid: greenyellow;
 
 //FONT SIZE
-$default-font-size: 1.8rem;
+$default-font-size: 1.6rem;
 
 //MEDIA QUERY WIDTH
 $phone-max-width: 37.5em; //600px
@@ -220,7 +221,7 @@ $form-group-margin-bottom: 3rem;
 //TEXTBOX
 $textbox-label-font-size: 1.2rem;
 $textbox-label-top: 50%;
-$textbox-label-translate: translateY(2.8rem);
+$textbox-label-translate: translateY(-3.6rem);
 $textbox-label-left: 1.5rem;
 $textbox-label-transition: all 0.2s ease-in;
 
