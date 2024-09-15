@@ -1,4 +1,4 @@
-Shooting Academy project
+Shooting Academy project - done
 
 Technologies:
 
@@ -25,9 +25,9 @@ Purpose: Improve my Front-end skills
 
 Project ends up when all points below are ready:
 
-- HomePage / Landing Page
-- AuthenticationPage + PocketBase Auth configured
-- Contact Page / Contact Form + PocketBase stores thats data
+- HomePage / Landing Page 
+- AuthenticationPage + PocketBase Auth configured 
+- Contact Page / Contact Form + PocketBase stores thats data 
 - Project handles responsiveness for:
   - 0 - 600px: Phone
   - 600 - 900px: Tablet portrait
@@ -37,8 +37,7 @@ Project ends up when all points below are ready:
 - Pages can be handled by old browses (sass @support etc)
 - Most important pages are ready:
   - Home
-  - Contact
-  - News
+  - Authentication
 - Has complete unit tests
 
 There is a chance that number of points would be expanded.
