@@ -4,7 +4,7 @@ import HeadingPrimary from '../../components/HeadingPrimary';
 import { SignInFormValues, signInSchema } from './SignInForm/validation';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useSignIn } from '../../api/hooks/Authenticate';
-import { Toaster, toast } from 'sonner';
+import { toast } from 'sonner';
 import useRouter from '../../routes/hooks/useRouter';
 import { Paths } from '../../routes/paths';
 import SingInForm from './SignInForm/SignInForm';
@@ -53,7 +53,7 @@ const SignInPage = () => {
         <Column size="12">
           <div className="register__card">
             <div className="u-margin-bottom-huge u-text-align-center">
-              <HeadingPrimary>Register now!</HeadingPrimary>
+              <HeadingPrimary>Sign in now!</HeadingPrimary>
             </div>
             <FormProvider {...formMethods}>
               <form
@@ -65,7 +65,6 @@ const SignInPage = () => {
               </form>
             </FormProvider>
           </div>
-          <Toaster />
         </Column>
       </Row>
     </div>

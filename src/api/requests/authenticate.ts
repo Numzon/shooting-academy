@@ -1,5 +1,5 @@
 import pb from '../../lib/pocketbase';
-import { SignInRequest } from '../../types/authenticate';
+import { LoginRequest, SignInRequest } from '../../types/authenticate';
 
 const USERS_COLLECTION_NAME = 'users';
 
@@ -10,3 +10,6 @@ export const signIn = (model: SignInRequest) =>
     password: model.password,
     passwordConfirm: model.confirmPassword,
   });
+
+export const login = (model: LoginRequest) =>
+  pb.collection(USERS_COLLECTION_NAME).authWithPassword(model.email, model.password);
