@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import useNavigationCheckbox from '../../../../contexts/NavigationCheckboxContext/hooks';
 
 export const NavigationButton = () => {

@@ -77,6 +77,8 @@ if (import.meta.vitest) {
     });
 
     it('ContactSection with filled & valid form, create throws', async () => {
+      var errorMock = vi.spyOn(console, 'error');
+      errorMock.mockImplementation(() => {});
       collectionMock.mockReturnValueOnce({
         create: () => {
           throw new Error('some-error');

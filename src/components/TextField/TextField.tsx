@@ -1,15 +1,18 @@
 import { useState } from 'react';
 import { useController, useFormContext } from 'react-hook-form';
 
+type TextFieldTypes = 'text' | 'password';
+
 type TextFieldProps = {
   children: React.ReactNode;
   id: string;
   name: string;
+  type?: TextFieldTypes;
   placeholder?: string;
   error?: string;
 };
 
-export const TextField = ({ name, children, placeholder, id }: TextFieldProps) => {
+export const TextField = ({ name, children, placeholder, id, type }: TextFieldProps) => {
   const { control } = useFormContext();
   const [errorTextVisible, setErrorTextVisible] = useState(false);
   const {
@@ -21,7 +24,7 @@ export const TextField = ({ name, children, placeholder, id }: TextFieldProps) =
     <div className="form__group">
       <input
         className={`form__input ${invalid ? 'form__input--invalid' : ''}`}
-        type="text"
+        type={type ?? 'text'}
         value={value}
         placeholder={placeholder}
         {...fieldProps}

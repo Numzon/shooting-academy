@@ -1,6 +1,6 @@
 import { renderHook } from '@testing-library/react';
 import useNavigationCheckbox from '../useNavigationCheckbox';
-import NavigationCheckboxContextProvider from '../../NavigationCheckboxContext';
+import NavigationCheckboxContextProvider from '../../NavigationCheckboxContextProvider';
 import React from 'react';
 
 if (import.meta.vitest) {

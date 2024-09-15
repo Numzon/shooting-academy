@@ -1,10 +1,15 @@
 import RouterProvider from './routes/RouteProvider';
 import { queryClient, QueryClientProvider } from './lib/react-query';
+import { Toaster } from 'sonner';
+import AuthenicateContextProvider from './contexts/AuthenticateContext';
 
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <RouterProvider />
+      <AuthenicateContextProvider>
+        <RouterProvider />
+        <Toaster richColors />
+      </AuthenicateContextProvider>
     </QueryClientProvider>
   );
 }

@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { HomePopupContext } from '../HomePopupContext';
+import HomePopupContext from '../HomePopupContext';
 
 export const useHomePopup = () => {
   const context = useContext(HomePopupContext);

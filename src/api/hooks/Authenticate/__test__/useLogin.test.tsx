@@ -1,21 +1,26 @@
 import { renderHook } from '@testing-library/react';
-import { useCreateSubscriber } from '../useCreateSubscriber';
 import { queryClient, QueryClientProvider } from '../../../../lib/react-query';
+import { useLogin } from '../useLogin';
 
 if (import.meta.vitest) {
   const { describe, it, expect, vi, beforeEach, afterEach } = import.meta.vitest;
 
-  const { createSubscriberMock } = vi.hoisted(() => ({
-    createSubscriberMock: vi.fn(),
+  const { loginMock } = vi.hoisted(() => ({
+    loginMock: vi.fn(),
   }));
 
-  vi.mock('../../../requests/subscriber', () => ({
-    createSubscriber: createSubscriberMock,
+  vi.mock('../../../requests/authenticate', () => ({
+    login: loginMock,
   }));
 
   beforeEach(() => {
-    createSubscriberMock.mockReturnValue({
-      id: '',
+    loginMock.mockReturnValue({
+      token: '',
+      record: {
+        id: '',
+        username: '',
+        email: '',
+      },
     });
   });
 
@@ -23,20 +28,19 @@ if (import.meta.vitest) {
     vi.clearAllMocks();
   });
 
-  describe('useCreateSubscriber', () => {
-    it('useCreateSubscriber', async () => {
+  describe('useLogin', () => {
+    it('useLogin', async () => {
       const wrapper = ({ children }: { children: React.ReactNode }) => (
         <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
       );
-      const { result } = renderHook(() => useCreateSubscriber(), { wrapper });
+      const { result } = renderHook(() => useLogin(), { wrapper });
 
       await result.current.mutateAsync({
         email: '',
-        fullname: '',
-        isRadioTrue: false,
+        password: '',
       });
 
-      expect(createSubscriberMock).toHaveBeenCalledOnce();
+      expect(loginMock).toHaveBeenCalledOnce();
     });
   });
 }

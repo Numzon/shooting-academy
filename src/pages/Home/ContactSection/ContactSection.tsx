@@ -5,7 +5,7 @@ import { FormProvider, SubmitHandler, useForm } from 'react-hook-form';
 import { ContactFormValues, contactValidationSchema } from './ContactForm/validation';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useCreateSubscriber } from '../../../api/hooks/Subscriber';
-import { Toaster, toast } from 'sonner';
+import { toast } from 'sonner';
 
 export const ContactSection = () => {
   const formMethods = useForm<ContactFormValues>({
@@ -63,7 +63,6 @@ export const ContactSection = () => {
           </div>
         </Column>
       </Row>
-      <Toaster richColors />
     </div>
   );
 };

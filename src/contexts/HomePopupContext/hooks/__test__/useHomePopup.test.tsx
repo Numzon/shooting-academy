@@ -1,6 +1,6 @@
 import { renderHook, waitFor } from '@testing-library/react';
 import useHomePopup from '../useHomePopup';
-import HomePopupContextProvider from '../../HomePopupContext';
+import HomePopupContextProvider from '../../HomePopupContextProvider';
 import React from 'react';
 
 if (import.meta.vitest) {

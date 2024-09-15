@@ -1,4 +1,4 @@
-import HomePopupContextProvider from '../../contexts/HomePopupContext/HomePopupContext';
+import HomePopupContextProvider from '../../contexts/HomePopupContext/HomePopupContextProvider';
 import BundlesSection from './BundlesSection';
 import ContactSection from './ContactSection';
 import CoursesSection from './CoursesSection';
