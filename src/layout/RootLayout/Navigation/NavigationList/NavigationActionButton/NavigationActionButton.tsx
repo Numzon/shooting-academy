@@ -11,6 +11,7 @@ export const NavigationActionButton = ({ children, onClick }: NavigationActionBu
   return (
     <li className="navigation__item">
       <a
+        data-testid="action-button-link"
         className="navigation__link"
         href="#"
         onClick={(event) => {
