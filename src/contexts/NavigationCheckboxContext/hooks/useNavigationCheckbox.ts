@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { NavigationCheckboxContext } from '../NavigationCheckboxContext';
+import NavigationCheckboxContext from '../NavigationCheckboxContext';
 
 export const useNavigationCheckbox = () => {
   const context = useContext(NavigationCheckboxContext);

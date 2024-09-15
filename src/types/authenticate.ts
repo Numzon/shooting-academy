@@ -20,3 +20,8 @@ export type LoginResponse = {
   token: string;
   user: UserData;
 };
+
+export type AuthenticateData = {
+  token: string;
+  user: UserData;
+};

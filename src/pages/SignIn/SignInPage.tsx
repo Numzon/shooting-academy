@@ -48,10 +48,10 @@ const SignInPage = () => {
   };
 
   return (
-    <div className="register">
+    <div className="authentication-page">
       <Row>
         <Column size="12">
-          <div className="register__card">
+          <div className="authentication-page__card">
             <div className="u-margin-bottom-huge u-text-align-center">
               <HeadingPrimary>Sign in now!</HeadingPrimary>
             </div>

@@ -8,6 +8,7 @@ import { useLogin } from '../../api/hooks/Authenticate/useLogin';
 import { toast } from 'sonner';
 import { Paths } from '../../routes/paths';
 import useRouter from '../../routes/hooks/useRouter';
+import useAuthenticate from '../../contexts/AuthenticateContext/hooks/useAuthenticate';
 
 export const LoginPage = () => {
   const formMethods = useForm<LoginFormValues>({
@@ -20,6 +21,7 @@ export const LoginPage = () => {
   const { handleSubmit } = formMethods;
   const { mutateAsync, isSuccess } = useLogin();
   const router = useRouter();
+  const { login } = useAuthenticate();
 
   const onSubmit: SubmitHandler<LoginFormValues> = async (values) => {
     try {
@@ -29,8 +31,9 @@ export const LoginPage = () => {
           password: values.password,
         },
         {
-          onSuccess() {
+          onSuccess(data) {
             toast.success('Success');
+            login(data);
             router.push(Paths.home);
           },
           onError() {

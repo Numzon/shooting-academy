@@ -1,2 +1,2 @@
-export { default } from './NavigationCheckboxContext';
+export { default } from './NavigationCheckboxContextProvider';
 export * from './hooks';
